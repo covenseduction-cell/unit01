@@ -313,9 +313,9 @@
 
   /* The Games - retro 90s arcade list */
   .games-grid { display: flex; flex-direction: column; gap: 12px; margin-top: 50px; }
-  .game-card { position: relative; overflow: hidden; background: #0c0c0c; border: 2px solid rgba(255,255,255,0.18); padding: 22px 26px; display: flex; align-items: center; gap: 22px; transition: border-color 0.2s var(--ease), background 0.2s var(--ease), box-shadow 0.2s var(--ease), transform 0.2s var(--ease); }
+  .game-card { position: relative; overflow: hidden; background: #0c0c0c; border: 2px solid rgba(255,255,255,0.18); padding: 30px 26px; display: flex; align-items: center; gap: 22px; box-shadow: inset 0 1px 0 rgba(255,255,255,0.12), inset 0 -2px 0 rgba(0,0,0,0.55), 0 6px 16px rgba(0,0,0,0.45); transition: border-color 0.2s var(--ease), background 0.2s var(--ease), box-shadow 0.2s var(--ease), transform 0.2s var(--ease); }
   .game-card::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: repeating-linear-gradient(rgba(255,255,255,0.05) 0 1px, transparent 1px 3px); opacity: 0.5; }
-  .game-card:hover, .game-card:focus-visible { background: #131313; border-color: #ffffff; box-shadow: 0 0 14px rgba(255,255,255,0.12), inset 0 0 0 1px rgba(255,255,255,0.25); transform: translateY(-2px); }
+  .game-card:hover, .game-card:focus-visible { background: #131313; border-color: #ffffff; box-shadow: inset 0 1px 0 rgba(255,255,255,0.22), inset 0 0 0 1px rgba(255,255,255,0.25), 0 0 16px rgba(255,255,255,0.14), 0 10px 24px rgba(0,0,0,0.55); transform: translateY(-2px); }
   .gc-emoji { font-size: 30px; line-height: 1; flex: 0 0 auto; position: relative; z-index: 1; }
   .gc-body { flex: 1 1 auto; min-width: 0; position: relative; z-index: 1; }
   .gc-titlerow { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
