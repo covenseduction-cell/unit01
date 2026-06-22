@@ -377,6 +377,31 @@
   .email-copy.copied { border-color: rgba(255,255,255,0.4); }
   .email-copy.copied .email-copy__hint { color: var(--white); }
 
+  /* game tiles are clickable */
+  .game-card { cursor: pointer; }
+  .gc-more { margin-top: auto; padding-top: 2px; font-family: "Space Grotesk", sans-serif; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--silver-dim); transition: color 0.3s var(--ease); }
+  .game-card:hover .gc-more, .game-card:focus-visible .gc-more { color: var(--white); }
+  .game-card:focus-visible { outline: 1px solid rgba(255,255,255,0.35); outline-offset: -1px; }
+
+  /* Game detail modal */
+  body.modal-open { overflow: hidden; }
+  .modal { position: fixed; inset: 0; z-index: 300; display: none; }
+  .modal.open { display: block; }
+  .modal__backdrop { position: absolute; inset: 0; background: rgba(0,0,0,0.72); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); }
+  .modal__panel { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: min(620px, calc(100vw - 36px)); max-height: calc(100svh - 60px); overflow-y: auto; background: linear-gradient(160deg, #141414, #0c0c0c); border: 1px solid var(--line); border-radius: 6px; padding: clamp(26px, 4vw, 40px); animation: panelIn 0.35s var(--ease); }
+  @keyframes panelIn { from { opacity: 0; transform: translate(-50%, -46%); } to { opacity: 1; transform: translate(-50%, -50%); } }
+  .modal__close { position: absolute; top: 12px; right: 16px; background: none; border: 0; color: var(--silver-dim); font-size: 28px; line-height: 1; cursor: pointer; transition: color 0.3s var(--ease); }
+  .modal__close:hover { color: var(--white); }
+  .modal__head { display: flex; align-items: center; gap: 16px; margin-bottom: 18px; padding-right: 30px; }
+  .modal__emoji { font-size: 40px; line-height: 1; }
+  .modal__title { font-family: "Space Grotesk", sans-serif; font-weight: 600; font-size: 25px; color: var(--white); letter-spacing: -0.01em; }
+  .modal__players { display: block; margin-top: 4px; font-family: "Space Grotesk", sans-serif; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--silver-dim); }
+  .modal__detail { font-size: 15px; color: var(--silver); font-weight: 300; line-height: 1.65; }
+  .modal__shots { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; margin-top: 26px; }
+  .shot { aspect-ratio: 16 / 10; border-radius: 4px; overflow: hidden; background: #0c0c0c; border: 1px solid var(--line); display: flex; align-items: center; justify-content: center; }
+  .shot img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .shot--empty span { font-family: "Space Grotesk", sans-serif; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--silver-dim); }
+
   /* ---------- Reveal animation ---------- */
   .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.9s var(--ease), transform 0.9s var(--ease); }
   .reveal.in { opacity: 1; transform: none; }
@@ -441,7 +466,7 @@
         <div class="specs">
           <div class="row"><span class="k">Build</span><span class="v">Welded steel, powder-coated</span></div>
           <div class="row"><span class="k">Display</span><span class="v">27-inch screen</span></div>
-          <div class="row"><span class="k">Games</span><span class="v">Six per cabinet</span></div>
+          <div class="row"><span class="k">Games</span><span class="v">Five per cabinet</span></div>
           <div class="row"><span class="k">Footprint</span><span class="v">Compact, single unit</span></div>
         </div>
       </div>
@@ -461,39 +486,39 @@
     <div class="wrap">
       <div class="reveal">
         <span class="index-tag">02 · The Games</span>
-        <h2>Six original games.</h2>
-        <p class="lead">Every cabinet comes with the same set of pass-and-play games. They are quick to learn and made for short sessions in any venue.</p>
+        <h2>Five original games.</h2>
+        <p class="lead">Every cabinet comes with a set of original pass-and-play games. Each game can be customised, and any game can be switched on or off at set times of day. They are quick to learn and made for short sessions in any venue.</p>
       </div>
       <div class="games-grid reveal">
-        <div class="game-card">
+        <div class="game-card" role="button" tabindex="0" data-game="cooked">
           <div class="gc-top"><span class="emoji">🥙</span><span class="players">1-2P</span></div>
           <h3>Cooked</h3>
-          <p>Run a late-night kitchen. Prepare orders and serve customers before the queue backs up.</p>
+          <p>Run a late-night kitchen. Take the orders and serve them before the queue backs up.</p>
+          <span class="gc-more">More info</span>
         </div>
-        <div class="game-card">
+        <div class="game-card" role="button" tabindex="0" data-game="last-orders">
           <div class="gc-top"><span class="emoji">🍺</span><span class="players">2P</span></div>
           <h3>Last Orders</h3>
           <p>A top-down pub game. Finish your tasks while the bouncer tries to throw you out.</p>
+          <span class="gc-more">More info</span>
         </div>
-        <div class="game-card">
+        <div class="game-card" role="button" tabindex="0" data-game="vape-tetris">
           <div class="gc-top"><span class="emoji">💨</span><span class="players">1P</span></div>
           <h3>Vape Tetris</h3>
-          <p>A block-stacking puzzle. Clear lines and beat the high score.</p>
+          <p>Block-stacking pushed to a ridiculous extreme. Clear lines and chase the high score.</p>
+          <span class="gc-more">More info</span>
         </div>
-        <div class="game-card">
+        <div class="game-card" role="button" tabindex="0" data-game="swipe-date">
           <div class="gc-top"><span class="emoji">💔</span><span class="players">1P</span></div>
           <h3>Swipe Date</h3>
-          <p>Swipe through a set of absurd dating profiles and see how you score.</p>
+          <p>Swipe through a set of absurd dating profiles and let it judge your choices.</p>
+          <span class="gc-more">More info</span>
         </div>
-        <div class="game-card">
-          <div class="gc-top"><span class="emoji">🐱</span><span class="players">2P</span></div>
-          <h3>Cat Game</h3>
-          <p>A two-player board game. Knock your opponent's pieces off the board and get three in a row.</p>
-        </div>
-        <div class="game-card">
+        <div class="game-card" role="button" tabindex="0" data-game="would-you-rather">
           <div class="gc-top"><span class="emoji">🤔</span><span class="players">1-2P</span></div>
           <h3>Would You Rather</h3>
-          <p>Answer would-you-rather questions against the clock, alone or head-to-head.</p>
+          <p>Pick between two bad options against the clock, alone or head-to-head.</p>
+          <span class="gc-more">More info</span>
         </div>
       </div>
     </div>
@@ -540,6 +565,23 @@
     </div>
   </section>
 
+  <!-- GAME DETAIL MODAL -->
+  <div class="modal" id="gameModal" aria-hidden="true">
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal__close" type="button" data-close aria-label="Close">×</button>
+      <div class="modal__head">
+        <span class="modal__emoji" id="modalEmoji" aria-hidden="true"></span>
+        <div>
+          <h3 class="modal__title" id="modalTitle"></h3>
+          <span class="modal__players" id="modalPlayers"></span>
+        </div>
+      </div>
+      <p class="modal__detail" id="modalDetail"></p>
+      <div class="modal__shots" id="modalShots"></div>
+    </div>
+  </div>
+
 <script>
   // Header background on scroll
   const header = document.getElementById('header');
@@ -577,6 +619,81 @@
       ec._t = setTimeout(() => { ec.classList.remove('copied'); hint.textContent = original; }, 2000);
     });
   }
+
+  // Game detail modal
+  const GAMES = {
+    'cooked': { emoji: '🥙', title: 'Cooked', players: '1-2 Players', detail: 'Run a busy late-night kitchen under pressure. Take orders, cook the food and serve customers before the queue backs up. Play on your own or with a second person on the same shift, and expect every round to get faster and harder.', images: [] },
+    'last-orders': { emoji: '🍺', title: 'Last Orders', players: '2 Players', detail: 'A two-player, top-down pub game. Move around the pub and work through your list of tasks while the bouncer does his best to throw you out. Drinks, darts and the usual pub trouble included.', images: [] },
+    'vape-tetris': { emoji: '💨', title: 'Vape Tetris', players: '1 Player', detail: 'Block-stacking taken to a ridiculous extreme. Stack the clouds, clear the lines and push for a high score. The whole thing leans hard into vape culture on purpose, and the more over-the-top it gets, the better it plays.', images: [] },
+    'swipe-date': { emoji: '💔', title: 'Swipe Date', players: '1 Player', detail: 'Swipe through more than two hundred dating profiles, each one more absurd than the last. A scoring engine judges every choice you make and gives nothing back. It is meant to be outrageous, and that is the appeal.', images: [] },
+    'would-you-rather': { emoji: '🤔', title: 'Would You Rather', players: '1-2 Players', detail: 'Pick between two bad options against the clock, on your own or head-to-head with a friend. The choices start awkward and get more outrageous the longer you play.', images: [] }
+  };
+
+  const modal = document.getElementById('gameModal');
+  const mEmoji = document.getElementById('modalEmoji');
+  const mTitle = document.getElementById('modalTitle');
+  const mPlayers = document.getElementById('modalPlayers');
+  const mDetail = document.getElementById('modalDetail');
+  const mShots = document.getElementById('modalShots');
+  let lastFocused = null;
+
+  function renderShots(g) {
+    mShots.innerHTML = '';
+    const imgs = g.images || [];
+    const n = imgs.length || 3;
+    for (let i = 0; i < n; i++) {
+      const slot = document.createElement('div');
+      slot.className = 'shot';
+      if (imgs[i]) {
+        const im = document.createElement('img');
+        im.src = imgs[i];
+        im.loading = 'lazy';
+        im.alt = g.title + ' screenshot ' + (i + 1);
+        slot.appendChild(im);
+      } else {
+        slot.classList.add('shot--empty');
+        const s = document.createElement('span');
+        s.textContent = 'Screenshot';
+        slot.appendChild(s);
+      }
+      mShots.appendChild(slot);
+    }
+  }
+
+  function openModal(id) {
+    const g = GAMES[id];
+    if (!g) return;
+    mEmoji.textContent = g.emoji;
+    mTitle.textContent = g.title;
+    mPlayers.textContent = g.players;
+    mDetail.textContent = g.detail;
+    renderShots(g);
+    lastFocused = document.activeElement;
+    modal.classList.add('open');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('modal-open');
+    const closeBtn = modal.querySelector('.modal__close');
+    if (closeBtn) closeBtn.focus();
+  }
+
+  function closeModal() {
+    modal.classList.remove('open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('modal-open');
+    if (lastFocused && lastFocused.focus) lastFocused.focus();
+  }
+
+  document.querySelectorAll('.game-card').forEach((card) => {
+    const id = card.dataset.game;
+    card.addEventListener('click', () => openModal(id));
+    card.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openModal(id); }
+    });
+  });
+  modal.querySelectorAll('[data-close]').forEach((el) => el.addEventListener('click', closeModal));
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('open')) closeModal();
+  });
 </script>
 </body>
 </html>
