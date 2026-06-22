@@ -120,6 +120,19 @@
   }
   .nav-contact:hover { color: var(--bg); background: var(--white); border-color: var(--white); }
 
+  .nav-links { display: flex; align-items: center; gap: 22px; }
+  .nav-link {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--silver);
+    text-decoration: none;
+    transition: color 0.3s var(--ease);
+  }
+  .nav-link:hover { color: var(--white); }
+
   /* ---------- Hero ---------- */
   .hero {
     position: relative;
@@ -295,6 +308,22 @@
   .feature h3 { font-family: "Space Grotesk", sans-serif; font-weight: 600; font-size: 19px; margin: 18px 0 10px; color: var(--white); letter-spacing: -0.01em; }
   .feature p { font-size: 14px; color: var(--silver); font-weight: 300; }
 
+  /* offset for fixed header when jumping to a section */
+  section[id] { scroll-margin-top: 84px; }
+
+  /* The Games — game grid */
+  .games-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; margin-top: 50px; background: var(--line); border: 1px solid var(--line); border-radius: 4px; overflow: hidden; }
+  .game-card { background: var(--bg); padding: 30px 26px; display: flex; flex-direction: column; gap: 14px; transition: background 0.4s var(--ease); }
+  .game-card:hover { background: var(--bg-soft); }
+  .game-card .gc-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+  .game-card .emoji { font-size: 30px; line-height: 1; }
+  .game-card .players { font-family: "Space Grotesk", sans-serif; font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--silver-dim); border: 1px solid var(--line); border-radius: 999px; padding: 5px 10px; white-space: nowrap; }
+  .game-card h3 { font-family: "Space Grotesk", sans-serif; font-weight: 600; font-size: 18px; letter-spacing: -0.01em; color: var(--white); }
+  .game-card p { font-size: 13.5px; color: var(--silver); font-weight: 300; margin-top: -4px; }
+  @media (max-width: 900px) { .games-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 600px) { .games-grid { grid-template-columns: 1fr; } }
+  @media (max-width: 520px) { .nav-links { gap: 14px; } .nav-link { letter-spacing: 0.12em; } }
+
   /* ---------- CTA / contact ---------- */
   .cta {
     text-align: center;
@@ -367,7 +396,10 @@
   <header id="header">
     <div class="wrap bar">
       <a href="#top" class="mark">UNIT<span>01</span></a>
-      <a href="mailto:hello@unit01.london?subject=UNIT01%20%E2%80%94%20Venue%20enquiry" class="nav-contact">Contact</a>
+      <nav class="nav-links">
+        <a href="#games" class="nav-link">Games</a>
+        <a href="mailto:hello@unit01.london?subject=UNIT01%20%E2%80%94%20Venue%20enquiry" class="nav-contact">Contact</a>
+      </nav>
     </div>
   </header>
 
@@ -409,11 +441,54 @@
     </div>
   </section>
 
+  <!-- THE GAMES -->
+  <section id="games" class="block">
+    <div class="wrap">
+      <div class="reveal">
+        <span class="index-tag">02 — The Games</span>
+        <h2>Loaded with<br>local chaos.</h2>
+        <p class="lead">Every UNIT01 cabinet ships with a curated roster of original pass-and-play games — quick to grab, built for a queue, tuned for a takeaway. Drop in, play, pass it on.</p>
+      </div>
+      <div class="games-grid reveal">
+        <div class="game-card">
+          <div class="gc-top"><span class="emoji">🥙</span><span class="players">1–2P</span></div>
+          <h3>Cooked</h3>
+          <p>Carve the doner, fry the chips and build the orders before the queue kicks off. Kebabs, chaos, closing time.</p>
+        </div>
+        <div class="game-card">
+          <div class="gc-top"><span class="emoji">🍺</span><span class="players">2P</span></div>
+          <h3>Last Orders</h3>
+          <p>“Hidden in Plain Pint” — a top-down pub sim with tasks, a bouncer on your back and proper drunk physics.</p>
+        </div>
+        <div class="game-card">
+          <div class="gc-top"><span class="emoji">💨</span><span class="players">1P</span></div>
+          <h3>Vape Tetris</h3>
+          <p>Stack the clouds, clear the lines and chase the high score. Blow fat.</p>
+        </div>
+        <div class="game-card">
+          <div class="gc-top"><span class="emoji">💔</span><span class="players">1P</span></div>
+          <h3>Swipe Date</h3>
+          <p>Swipe through a deck of gloriously awful dating profiles and let the scoring engine roast your taste.</p>
+        </div>
+        <div class="game-card">
+          <div class="gc-top"><span class="emoji">🐱</span><span class="players">2P</span></div>
+          <h3>Cat Game</h3>
+          <p>A cozy board game — place your kittens, boop rivals off the edge and line up three cats to win.</p>
+        </div>
+        <div class="game-card">
+          <div class="gc-top"><span class="emoji">🤔</span><span class="players">1–2P</span></div>
+          <h3>Would You Rather</h3>
+          <p>Choose your fate. Impossible dilemmas, head-to-head, against the clock.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- FOR VENUES -->
   <section id="venues" class="block">
     <div class="wrap">
       <div class="reveal">
-        <span class="index-tag">02 — For Venues</span>
+        <span class="index-tag">03 — For Venues</span>
         <h2>We place. You profit.</h2>
         <p class="lead">UNIT01 installs, maintains and restocks the cabinet. You give it a corner. The machine pulls extra footfall, keeps customers in the seat longer, and earns its keep — at zero upfront cost to the venue.</p>
       </div>
