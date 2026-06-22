@@ -362,6 +362,21 @@
   }
   .end-mark span { color: rgba(111,116,123,0.55); }
 
+  .contact-intro { margin: 0 0 34px; font-size: clamp(15px, 2vw, 18px); font-weight: 300; color: var(--silver); }
+  .email-copy {
+    display: inline-flex; flex-direction: column; align-items: center; gap: 10px;
+    background: transparent; border: 1px solid var(--line); border-radius: 4px;
+    padding: 22px clamp(26px, 6vw, 44px); cursor: pointer; color: var(--white);
+    font-family: "Space Grotesk", sans-serif;
+    transition: border-color 0.3s var(--ease), background 0.3s var(--ease), transform 0.3s var(--ease);
+  }
+  .email-copy:hover { border-color: rgba(255,255,255,0.25); background: var(--bg-soft); transform: translateY(-2px); }
+  .email-copy:active { transform: translateY(0); }
+  .email-copy__addr { font-size: clamp(20px, 4.5vw, 32px); font-weight: 600; letter-spacing: -0.01em; }
+  .email-copy__hint { font-size: 11px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--silver-dim); transition: color 0.3s var(--ease); }
+  .email-copy.copied { border-color: rgba(255,255,255,0.4); }
+  .email-copy.copied .email-copy__hint { color: var(--white); }
+
   /* ---------- Reveal animation ---------- */
   .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.9s var(--ease), transform 0.9s var(--ease); }
   .reveal.in { opacity: 1; transform: none; }
@@ -398,7 +413,7 @@
       <a href="#top" class="mark">UNIT<span>01</span></a>
       <nav class="nav-links">
         <a href="#games" class="nav-link">Games</a>
-        <a href="mailto:hello@unit01.london?subject=UNIT01%20%E2%80%94%20Venue%20enquiry" class="nav-contact">Contact</a>
+        <a href="#contact" class="nav-contact">Contact</a>
       </nav>
     </div>
   </header>
@@ -516,9 +531,11 @@
   <section id="contact" class="cta">
     <div class="wrap reveal">
       <h2>Want one in your venue?</h2>
-      <a href="mailto:hello@unit01.london?subject=UNIT01%20%E2%80%94%20Venue%20enquiry&body=Hi%20UNIT01%2C%0A%0AI%27d%20like%20a%20machine%20in%20my%20venue.%0A%0AVenue%3A%20%0ALocation%3A%20%0A" class="btn">
-        Get a machine <span class="arrow">→</span>
-      </a>
+      <p class="contact-intro">Drop us a line and we'll sort an install.</p>
+      <button type="button" class="email-copy" id="emailCopy" data-email="hello@unit01.xyz" aria-label="Copy email address hello@unit01.xyz">
+        <span class="email-copy__addr">hello@unit01.xyz</span>
+        <span class="email-copy__hint">Tap to copy</span>
+      </button>
       <div class="end-mark">UNIT<span>01</span> · London</div>
     </div>
   </section>
@@ -537,6 +554,29 @@
     });
   }, { threshold: 0.18 });
   document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+
+  // Tap-to-copy email (no mail app)
+  const ec = document.getElementById('emailCopy');
+  if (ec) {
+    const hint = ec.querySelector('.email-copy__hint');
+    const original = hint.textContent;
+    ec.addEventListener('click', async () => {
+      const email = ec.dataset.email;
+      try {
+        await navigator.clipboard.writeText(email);
+      } catch (err) {
+        const t = document.createElement('textarea');
+        t.value = email; t.style.position = 'fixed'; t.style.opacity = '0';
+        document.body.appendChild(t); t.select();
+        try { document.execCommand('copy'); } catch (_) {}
+        document.body.removeChild(t);
+      }
+      ec.classList.add('copied');
+      hint.textContent = '✓ Copied!';
+      clearTimeout(ec._t);
+      ec._t = setTimeout(() => { ec.classList.remove('copied'); hint.textContent = original; }, 2000);
+    });
+  }
 </script>
 </body>
 </html>
