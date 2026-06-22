@@ -9,7 +9,7 @@
 <!-- Google Fonts (only external dependency) -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500&family=Press+Start+2P&display=swap" rel="stylesheet" />
 
 <style>
   :root {
@@ -311,17 +311,19 @@
   /* offset for fixed header when jumping to a section */
   section[id] { scroll-margin-top: 84px; }
 
-  /* The Games - vertical list */
-  .games-grid { display: flex; flex-direction: column; gap: 1px; margin-top: 50px; background: var(--line); border: 1px solid var(--line); border-radius: 4px; overflow: hidden; }
-  .game-card { background: var(--bg); padding: 24px 28px; display: flex; align-items: center; gap: 22px; transition: background 0.4s var(--ease); }
-  .game-card:hover { background: var(--bg-soft); }
-  .gc-emoji { font-size: 30px; line-height: 1; flex: 0 0 auto; }
-  .gc-body { flex: 1 1 auto; min-width: 0; }
-  .gc-titlerow { display: flex; align-items: center; gap: 12px; }
-  .game-card h3 { font-family: "Space Grotesk", sans-serif; font-weight: 600; font-size: 18px; letter-spacing: -0.01em; color: var(--white); }
-  .game-card .players { font-family: "Space Grotesk", sans-serif; font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--silver-dim); border: 1px solid var(--line); border-radius: 999px; padding: 4px 9px; white-space: nowrap; }
-  .game-card p { font-size: 13.5px; color: var(--silver); font-weight: 300; margin-top: 6px; }
-  @media (max-width: 520px) { .nav-links { gap: 14px; } .nav-link { letter-spacing: 0.12em; } .game-card { gap: 16px; padding: 20px; } .gc-more { display: none; } }
+  /* The Games - retro 90s arcade list */
+  .games-grid { display: flex; flex-direction: column; gap: 12px; margin-top: 50px; }
+  .game-card { position: relative; overflow: hidden; background: #0c0c0c; border: 2px solid rgba(255,255,255,0.18); padding: 22px 26px; display: flex; align-items: center; gap: 22px; transition: border-color 0.2s var(--ease), background 0.2s var(--ease), box-shadow 0.2s var(--ease), transform 0.2s var(--ease); }
+  .game-card::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: repeating-linear-gradient(rgba(255,255,255,0.05) 0 1px, transparent 1px 3px); opacity: 0.5; }
+  .game-card:hover, .game-card:focus-visible { background: #131313; border-color: #ffffff; box-shadow: 0 0 14px rgba(255,255,255,0.12), inset 0 0 0 1px rgba(255,255,255,0.25); transform: translateY(-2px); }
+  .gc-emoji { font-size: 30px; line-height: 1; flex: 0 0 auto; position: relative; z-index: 1; }
+  .gc-body { flex: 1 1 auto; min-width: 0; position: relative; z-index: 1; }
+  .gc-titlerow { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+  .game-card h3 { font-family: "Press Start 2P", "Space Grotesk", monospace; font-weight: 400; font-size: clamp(11px, 2.4vw, 13px); line-height: 1.5; letter-spacing: 0; color: var(--white); text-shadow: 0 0 6px rgba(255,255,255,0.25); }
+  .game-card:hover h3, .game-card:focus-visible h3 { text-shadow: 0 0 10px rgba(255,255,255,0.6); }
+  .game-card .players { font-family: "Press Start 2P", monospace; font-size: 8px; line-height: 1; letter-spacing: 0; text-transform: uppercase; color: var(--silver-dim); border: 1px solid rgba(255,255,255,0.25); border-radius: 0; padding: 5px 7px; white-space: nowrap; }
+  .game-card p { font-size: 13px; color: var(--silver); font-weight: 300; margin-top: 12px; }
+  @media (max-width: 520px) { .nav-links { gap: 14px; } .nav-link { letter-spacing: 0.12em; } .game-card { gap: 14px; padding: 18px; } .gc-more { display: none; } }
 
   /* ---------- CTA / contact ---------- */
   .cta {
@@ -378,7 +380,7 @@
 
   /* game tiles are clickable */
   .game-card { cursor: pointer; }
-  .gc-more { flex: 0 0 auto; white-space: nowrap; font-family: "Space Grotesk", sans-serif; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--silver-dim); transition: color 0.3s var(--ease); }
+  .gc-more { flex: 0 0 auto; white-space: nowrap; position: relative; z-index: 1; font-family: "Press Start 2P", monospace; font-size: 8px; line-height: 1.4; letter-spacing: 0; text-transform: uppercase; color: var(--silver-dim); transition: color 0.3s var(--ease); }
   .game-card:hover .gc-more, .game-card:focus-visible .gc-more { color: var(--white); }
   .game-card:focus-visible { outline: 1px solid rgba(255,255,255,0.35); outline-offset: -1px; }
 
