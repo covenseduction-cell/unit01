@@ -311,18 +311,17 @@
   /* offset for fixed header when jumping to a section */
   section[id] { scroll-margin-top: 84px; }
 
-  /* The Games - game grid */
-  .games-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; margin-top: 50px; background: var(--line); border: 1px solid var(--line); border-radius: 4px; overflow: hidden; }
-  .game-card { background: var(--bg); padding: 30px 26px; display: flex; flex-direction: column; gap: 14px; transition: background 0.4s var(--ease); }
+  /* The Games - vertical list */
+  .games-grid { display: flex; flex-direction: column; gap: 1px; margin-top: 50px; background: var(--line); border: 1px solid var(--line); border-radius: 4px; overflow: hidden; }
+  .game-card { background: var(--bg); padding: 24px 28px; display: flex; align-items: center; gap: 22px; transition: background 0.4s var(--ease); }
   .game-card:hover { background: var(--bg-soft); }
-  .game-card .gc-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
-  .game-card .emoji { font-size: 30px; line-height: 1; }
-  .game-card .players { font-family: "Space Grotesk", sans-serif; font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--silver-dim); border: 1px solid var(--line); border-radius: 999px; padding: 5px 10px; white-space: nowrap; }
+  .gc-emoji { font-size: 30px; line-height: 1; flex: 0 0 auto; }
+  .gc-body { flex: 1 1 auto; min-width: 0; }
+  .gc-titlerow { display: flex; align-items: center; gap: 12px; }
   .game-card h3 { font-family: "Space Grotesk", sans-serif; font-weight: 600; font-size: 18px; letter-spacing: -0.01em; color: var(--white); }
-  .game-card p { font-size: 13.5px; color: var(--silver); font-weight: 300; margin-top: -4px; }
-  @media (max-width: 900px) { .games-grid { grid-template-columns: repeat(2, 1fr); } }
-  @media (max-width: 600px) { .games-grid { grid-template-columns: 1fr; } }
-  @media (max-width: 520px) { .nav-links { gap: 14px; } .nav-link { letter-spacing: 0.12em; } }
+  .game-card .players { font-family: "Space Grotesk", sans-serif; font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--silver-dim); border: 1px solid var(--line); border-radius: 999px; padding: 4px 9px; white-space: nowrap; }
+  .game-card p { font-size: 13.5px; color: var(--silver); font-weight: 300; margin-top: 6px; }
+  @media (max-width: 520px) { .nav-links { gap: 14px; } .nav-link { letter-spacing: 0.12em; } .game-card { gap: 16px; padding: 20px; } .gc-more { display: none; } }
 
   /* ---------- CTA / contact ---------- */
   .cta {
@@ -379,7 +378,7 @@
 
   /* game tiles are clickable */
   .game-card { cursor: pointer; }
-  .gc-more { margin-top: auto; padding-top: 2px; font-family: "Space Grotesk", sans-serif; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--silver-dim); transition: color 0.3s var(--ease); }
+  .gc-more { flex: 0 0 auto; white-space: nowrap; font-family: "Space Grotesk", sans-serif; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--silver-dim); transition: color 0.3s var(--ease); }
   .game-card:hover .gc-more, .game-card:focus-visible .gc-more { color: var(--white); }
   .game-card:focus-visible { outline: 1px solid rgba(255,255,255,0.35); outline-offset: -1px; }
 
@@ -491,34 +490,44 @@
       </div>
       <div class="games-grid reveal">
         <div class="game-card" role="button" tabindex="0" data-game="cooked">
-          <div class="gc-top"><span class="emoji">🥙</span><span class="players">1-2P</span></div>
-          <h3>Cooked</h3>
-          <p>Run a late-night kitchen. Take the orders and serve them before the queue backs up.</p>
-          <span class="gc-more">More info</span>
+          <span class="gc-emoji">🥙</span>
+          <div class="gc-body">
+            <div class="gc-titlerow"><h3>Cooked</h3><span class="players">1-2P</span></div>
+            <p>Run a late-night kitchen. Take the orders and serve them before the queue backs up.</p>
+          </div>
+          <span class="gc-more">More info →</span>
         </div>
         <div class="game-card" role="button" tabindex="0" data-game="last-orders">
-          <div class="gc-top"><span class="emoji">🍺</span><span class="players">2P</span></div>
-          <h3>Last Orders</h3>
-          <p>A top-down pub game. Finish your tasks while the bouncer tries to throw you out.</p>
-          <span class="gc-more">More info</span>
+          <span class="gc-emoji">🍺</span>
+          <div class="gc-body">
+            <div class="gc-titlerow"><h3>Last Orders</h3><span class="players">2P</span></div>
+            <p>A top-down pub game. Finish your tasks while the bouncer tries to throw you out.</p>
+          </div>
+          <span class="gc-more">More info →</span>
         </div>
         <div class="game-card" role="button" tabindex="0" data-game="vape-tetris">
-          <div class="gc-top"><span class="emoji">💨</span><span class="players">1P</span></div>
-          <h3>Vape Tetris</h3>
-          <p>Block-stacking pushed to a ridiculous extreme. Clear lines and chase the high score.</p>
-          <span class="gc-more">More info</span>
+          <span class="gc-emoji">💨</span>
+          <div class="gc-body">
+            <div class="gc-titlerow"><h3>Vape Tetris</h3><span class="players">1P</span></div>
+            <p>Block-stacking pushed to a ridiculous extreme. Clear lines and chase the high score.</p>
+          </div>
+          <span class="gc-more">More info →</span>
         </div>
         <div class="game-card" role="button" tabindex="0" data-game="swipe-date">
-          <div class="gc-top"><span class="emoji">💔</span><span class="players">1P</span></div>
-          <h3>Swipe Date</h3>
-          <p>Swipe through a set of absurd dating profiles and let it judge your choices.</p>
-          <span class="gc-more">More info</span>
+          <span class="gc-emoji">💔</span>
+          <div class="gc-body">
+            <div class="gc-titlerow"><h3>Swipe Date</h3><span class="players">1P</span></div>
+            <p>Swipe through a set of absurd dating profiles and let it judge your choices.</p>
+          </div>
+          <span class="gc-more">More info →</span>
         </div>
         <div class="game-card" role="button" tabindex="0" data-game="would-you-rather">
-          <div class="gc-top"><span class="emoji">🤔</span><span class="players">1-2P</span></div>
-          <h3>Would You Rather</h3>
-          <p>Pick between two bad options against the clock, alone or head-to-head.</p>
-          <span class="gc-more">More info</span>
+          <span class="gc-emoji">🤔</span>
+          <div class="gc-body">
+            <div class="gc-titlerow"><h3>Would You Rather</h3><span class="players">1-2P</span></div>
+            <p>Pick between two bad options against the clock, alone or head-to-head.</p>
+          </div>
+          <span class="gc-more">More info →</span>
         </div>
       </div>
     </div>
