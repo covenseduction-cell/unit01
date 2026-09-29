@@ -38,7 +38,7 @@
     north: ["coal", "quartz", "amethyst", "lava", "potato", "beetroot"],
     spider: ["lapis", "pumpkin", "potato", "beetroot"],
     bread: ["emerald", "copper", "wheat", "carrot", "melon"],
-    rain: ["iron", "wheat", "potato", "beetroot"],
+    rain: ["iron", "potato", "beetroot"],
     ardcarran: ["coal", "lapis", "emerald", "potato", "beetroot"],
     hell: ["lava", "danger"]
   };

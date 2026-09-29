@@ -93,7 +93,12 @@ def main():
     landcol = ramp(relief, [(0, "#b5d3a6"), (40, "#a3c792"), (150, "#b3c98f"), (300, "#cdd09a"),
                             (500, "#ddd2a8"), (700, "#d9c7ae"), (850, "#eee8e0"), (1000, "#ffffff")])
     seacol = ramp(dland, [(0, "#cbe7f5"), (350, "#b9dcef"), (900, "#9ec9e6"), (2500, "#86b6da"), (8000, "#77a8d0")])
-    img = np.where(land[..., None], landcol * shade[..., None], seacol)
+    # Tint each region by its land's colour so the five lands read at a glance.
+    tint = np.zeros(raw.shape + (3,), np.float32)
+    for rid, lk in REGION_LAND.items():
+        tint[region == rid] = hexrgb(LAND_COLOURS[lk])
+    tinted = landcol * 0.45 + tint * 0.55
+    img = np.where(land[..., None], tinted * shade[..., None] * 1.08, seacol)
     img = np.where(loch[..., None], hexrgb("#c4e3f3"), img)
     hot = np.clip((heat - 0.05) / 0.6, 0, 1) * land
     img = img * (1 - hot[..., None] * 0.55) + hexrgb("#5a2a22") * (hot[..., None] * 0.55)
@@ -109,7 +114,17 @@ def main():
     thick[1:, :] |= border[:-1, :]
     thick[:, 1:] |= border[:, :-1]
     border = thick & land
-    img[border] = img[border] * 0.3 + hexrgb("#7a6a8a") * 0.7
+    img[border] = img[border] * 0.45 + hexrgb("#7a6a8a") * 0.55
+    # Borders between different lands: bolder and darker.
+    lg = np.zeros(rg.shape, np.uint8)
+    for rid, lk in REGION_LAND.items():
+        lg[rg == rid] = list(LAND_COLOURS).index(lk) + 1
+    lb = np.zeros_like(land)
+    lb[1:, :] |= (lg[1:, :] != lg[:-1, :]) & (lg[1:, :] > 0) & (lg[:-1, :] > 0)
+    lb[:, 1:] |= (lg[:, 1:] != lg[:, :-1]) & (lg[:, 1:] > 0) & (lg[:, :-1] > 0)
+    for _ in range(2):
+        t2 = lb.copy(); t2[1:, :] |= lb[:-1, :]; t2[:, 1:] |= lb[:, :-1]; lb = t2
+    img[lb & land] = hexrgb("#3a3346")
     Image.fromarray(img.clip(0, 255).astype(np.uint8)).save(OUT / "world.jpg", quality=86, optimize=True, progressive=True)
 
     # --- muted base for thematic maps ---
