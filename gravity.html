@@ -6,7 +6,7 @@
 <title>Gravity &amp; building · Settlers III Wiki</title>
 <meta name="description" content="Anything you build has to hold itself up. Timber carries loads a long way, stone barely overhangs at all, and a badly planned roof comes down.">
 <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="assets/style.css?v=72f027a693">
+<link rel="stylesheet" href="assets/style.css?v=17c51f08e8">
 </head>
 <body class="page-gravity">
 <a class="skip" href="#main">Skip to content</a>
@@ -84,37 +84,43 @@
   <li><strong>Spans supported at both ends go further.</strong> Arches and bridges work because each half helps hold up the middle.</li>
   <li><strong>The block doing the carrying decides.</strong> A stone block on the end of a long oak beam is fine, because the beam still has reach to spare. A stone shelf sticking out of a stone wall runs out after a couple of blocks.</li>
 </ul>
+<figure class="diagram"><img src="assets/diagrams/carrier.svg" alt="Side view: a stone block sits on the end of a long log beam and holds; a cobblestone shelf off a cobblestone column holds two blocks and the third falls."><figcaption>The block doing the carrying decides. Stone on a log beam is fine; a cobblestone shelf runs out after two blocks.</figcaption></figure>
 <div class="note"><b>Built blocks and dug mines</b><p>These support rules apply to blocks players have placed. Natural hills, cliffs and caves stay put, but <a href="#cave-ins">mines you dig</a> can cave in.</p></div>
 
 <h2 id="material-strengths">Material strengths</h2>
 <table>
   <tr><th>Class</th><th>Blocks</th><th class="n">Reach</th><th class="n">Hang</th></tr>
-  <tr><td><strong>Timber</strong></td><td>Logs, planks, wooden stairs, slabs and trapdoors, bamboo blocks</td><td class="n">12</td><td class="n">0</td></tr>
+  <tr><td><strong>Timber</strong></td><td>Logs and wood, <strong>wooden fences and fence gates</strong>, bamboo blocks</td><td class="n">12</td><td class="n">1</td></tr>
+  <tr><td><strong>Planks</strong></td><td>Planks, wooden stairs, slabs and trapdoors: sawn timber, weaker than logs</td><td class="n">8</td><td class="n">1</td></tr>
   <tr><td><strong>Prop</strong></td><td>Scaffolding</td><td class="n">19</td><td class="n">10</td></tr>
   <tr><td><strong>Metal</strong></td><td>Iron, gold, diamond, emerald, lapis and copper blocks; chains; iron bars</td><td class="n">19</td><td class="n">12</td></tr>
   <tr><td><strong>Reinforced</strong></td><td>Obsidian, netherite blocks, reinforced deepslate</td><td class="n">29</td><td class="n">15</td></tr>
-  <tr><td><strong>Lattice</strong></td><td>Fences, walls, ladders</td><td class="n">7</td><td class="n">0</td></tr>
+  <tr><td><strong>Lattice</strong></td><td>Stone walls, ladders, nether brick fences</td><td class="n">7</td><td class="n">0</td></tr>
   <tr><td><strong>Masonry</strong></td><td>Bricks, polished and smooth stone, sandstone, terracotta, concrete, quartz, deepslate tiles</td><td class="n">4</td><td class="n">1</td></tr>
   <tr><td><strong>Weak masonry</strong></td><td>Cracked, mossy and chiselled variants</td><td class="n">2</td><td class="n">0</td></tr>
   <tr><td><strong>Stone</strong></td><td>Stone, deepslate, basalt, ores, most other solid blocks</td><td class="n">2</td><td class="n">1</td></tr>
   <tr><td><strong>Rough stone</strong></td><td>Cobblestone, andesite, diorite, granite, tuff, blackstone</td><td class="n">2</td><td class="n">0</td></tr>
-  <tr><td><strong>Glass</strong></td><td>All glass</td><td class="n">1</td><td class="n">0</td></tr>
+  <tr><td><strong>Glass</strong></td><td>All glass</td><td class="n">2</td><td class="n">0</td></tr>
   <tr><td><strong>Soft</strong></td><td>Wool, carpets, leaves, hay, moss</td><td class="n">1</td><td class="n">2</td></tr>
   <tr><td><strong>Soil</strong></td><td>Dirt, grass, mud, clay, farmland, snow blocks</td><td class="n">0</td><td class="n">0</td></tr>
 </table>
 <p>Reach is roughly how many blocks sideways a material can carry a load. Hang is how far below itself it can hold something up.</p>
+<figure class="diagram"><img src="assets/diagrams/reach.svg" alt="Side view: a stone brick shelf sticks out four blocks and the fifth falls; a log beam sticks out twelve blocks and the thirteenth falls."><figcaption>Reach in practice: the same wall carries a four-block brick shelf, or a twelve-block log beam.</figcaption></figure>
+<div class="tip"><b>Logs beat planks</b><p>Whole timber (logs, fences and fence gates) carries a load 12 blocks. Sawn timber (planks, stairs, slabs) only carries it 8. Use logs and fences for beams and posts, and planks for floors and walls between them.</p></div>
 
 <h2 id="building-techniques-that-work">Building techniques that work</h2>
 <h3 id="timber-frames">Timber frames</h3>
-<p>Timber has by far the best reach of any common material. A timber frame with posts and beams can carry a stone infill or a stone floor on top, because the beams do the carrying. Most practical buildings will be timber-framed.</p>
+<p>Logs and wooden fences have by far the best reach of any common material. A frame of log posts and log beams can carry a plank or stone infill, or a stone floor on top, because the beams do the carrying. Fences are as strong as logs, so they make good slim posts and railings. Most practical buildings will be timber-framed.</p>
 <h3 id="arches-and-bridges">Arches and bridges</h3>
 <p>A span supported from both ends gets extra strength, so arches, vaults and bridges are possible even in masonry. Build from both sides and meet in the middle.</p>
+<figure class="diagram"><img src="assets/diagrams/arch.svg" alt="Side view: a stone brick arch bridge over water, supported from both banks."><figcaption>An arch: each half helps hold up the middle, so the span goes further than either side could alone.</figcaption></figure>
 <h3 id="props">Props</h3>
 <p>Scaffolding is the prop: cheap, strong, and clearly a support. Use it to hold things up while you build, or leave it in place as permanent shoring.</p>
 <h3 id="hanging-things">Hanging things</h3>
 <p>To hang a lantern, a chandelier or a floor from above, use chains or iron. They're the only common blocks with real hanging strength.</p>
+<figure class="diagram"><img src="assets/diagrams/hanging.svg" alt="Side view: a lantern hangs on a long chain from a log beam; a stone block hangs below the beam but a second stone below it falls."><figcaption>Chains hang 12 blocks. Stone hangs just one.</figcaption></figure>
 <h3 id="rafts-docks-and-jetties">Rafts, docks and jetties</h3>
-<p>Timber floats. Water supports timber for a short distance, so wooden jetties, rafts and pontoons work. Stone gets no help from water: you can't found a keep on a lake.</p>
+<p>Timber floats, logs and planks alike. Water supports timber for a short distance, so wooden jetties, rafts and pontoons work. Stone gets no help from water: you can't found a keep on a lake.</p>
 
 <h2 id="collapses">Collapses</h2>
 <ul>
@@ -134,6 +140,7 @@
   <li><strong>Shallow digs are safe.</strong> Roofs with less than 4 blocks of cover above them aren't judged.</li>
   <li>You're told the risk in chat as you dig.</li>
 </ul>
+<figure class="diagram"><img src="assets/diagrams/mine.svg" alt="Top-down plan of a mine: a one-block-wide tunnel, a room braced with two posts, and a wide room without posts marked as a cave-in risk."><figcaption>Seen from above. A one-wide tunnel is always safe; a wide room needs posts.</figcaption></figure>
 <h3 id="posts">Posts</h3>
 <p>Brace the roof with <strong>posts</strong>: a column of wooden fence, logs or scaffolding standing on the floor and pressed right up against the rock roof. A post braces the roof within about 4 blocks of it (posts every 8 blocks cover a tunnel). Planks don't count, and a post that stops short of the roof holds nothing.</p>
 <table>

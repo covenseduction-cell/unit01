@@ -3,12 +3,26 @@
 
 <h2>Building a ship</h2>
 <ol>
-  <li><strong>Build a boat</strong> out of blocks, floating in water. Any shape, any materials, up to <strong>2,000 blocks</strong>. Give it a hull, a deck, chests for the hold, and a block for the wheel.</li>
+  <li><strong>Build a boat</strong> floating in water, up to <strong>1,000 blocks</strong>: a <strong>wooden hull</strong> with a <strong>wool sail</strong> up a mast (see <a href="#what-makes-her-seaworthy">what makes her seaworthy</a>). Give it a deck, chests for the hold, and a block for the wheel.</li>
   <li><strong>Look at the block you want as the wheel</strong> and run <code>/ship create &lt;name&gt;</code>. That block becomes the helm.</li>
   <li><strong>Right-click the wheel</strong> and choose <strong>Set sail</strong>.</li>
 </ol>
 <p>The ship is detected from the wheel outward. Everything connected is part of the ship, up to where it meets the sea floor or land. If it touches the ground you'll get a warning. Make sure it's floating free before you set sail.</p>
 <div class="note"><b>No building at sea</b><p>You can't place blocks on a ship while it's under way. Drop anchor first.</p></div>
+
+<h2>What makes her seaworthy</h2>
+<p>When you choose <strong>Set sail</strong>, the ship is checked. If anything is wrong she stays in port and tells you exactly what, with the numbers. Nothing is lost.</p>
+<figure class="diagram"><img src="assets/diagrams/ship-sail.svg" alt="Side view of a ship: a plank hull on the water, a log mast, and a wool sail in the shaded top 30 percent of her height."><figcaption>A wooden hull below, and a wool sail in the top 30% of her height.</figcaption></figure>
+<table>
+  <tr><th>Rule</th><th>What it means</th></tr>
+  <tr><td><strong>A wool sail</strong></td><td>At least <strong>20%</strong> of all her blocks must be <strong>wool in the top 30% of her height</strong>. Wool lower down doesn't count. On a 400-block ship that's 80 wool, up high.</td></tr>
+  <tr><td><strong>A wooden hull</strong></td><td>At least <strong>half</strong> of the blocks below the sail zone must be wood: planks, logs, wooden stairs, slabs, fences, trapdoors and doors, plus chests and barrels. You can't build the hull out of wool.</td></tr>
+  <tr><td><strong>Nothing heavy</strong></td><td>No stone of any kind (stone, cobblestone, bricks, deepslate, andesite and so on), obsidian, concrete, terracotta, ores, or metal blocks. These aren't part of the ship, and one touching her stops her sailing.</td></tr>
+  <tr><td><strong>Nothing natural</strong></td><td>No dirt, grass, sand, gravel, clay, mud, snow, kelp, seagrass, coral or sea pickles.</td></tr>
+  <tr><td><strong>Afloat and clear</strong></td><td>She must float clear of the seabed, and not touch a stone quay or any natural ground. Leave a gap of water between the hull and the dock.</td></tr>
+  <tr><td><strong>Size</strong></td><td>Up to <strong>1,000 blocks</strong>. Every block is drawn separately while she sails, so the limit keeps the server smooth.</td></tr>
+</table>
+<div class="tip"><b>Check early</b><p><code>/ship create</code> already warns you if she wouldn't sail yet, so you can fix the sail or the hull before you load the hold.</p></div>
 
 <h2>Sailing</h2>
 <ol>

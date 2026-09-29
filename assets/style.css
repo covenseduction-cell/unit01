@@ -267,3 +267,7 @@ body.map-open { overflow: hidden; }
 .map-compare img { display: block; width: 100%; aspect-ratio: 26 / 33; object-fit: contain; background: #dbe9f1; border-bottom: 1px solid var(--line-soft); }
 .map-compare figcaption { font-size: 13px; color: var(--muted); padding: 6px 8px; }
 @media (max-width: 860px) { .map-compare { grid-template-columns: 1fr; } }
+
+figure.diagram { margin: 4px 0 18px; border: 1px solid var(--line-soft); background: #f7fbfd; max-width: 640px; }
+figure.diagram img { display: block; width: 100%; height: auto; }
+figure.diagram figcaption { font-size: 13px; color: var(--muted); padding: 6px 10px; border-top: 1px solid var(--line-soft); background: #f8f9fa; }
