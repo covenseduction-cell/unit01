@@ -106,6 +106,65 @@ def brace(x0, x1, y, text):
     return f
 
 
+def grid_svg(rows, ox, oy, c):
+    out = []
+    for j, row in enumerate(rows):
+        for i, ch in enumerate(row):
+            b = block(ch, 0, 0)
+            if b:
+                out.append(f'<g transform="translate({ox + i*c} {oy + j*c}) scale({c/CELL})">{b}</g>')
+    return "".join(out)
+
+
+def mine_panels():
+    """Four panels in a 2x2 grid: three plans seen from above, and one side view of a post."""
+    c = 20
+    T = 'font-family="-apple-system,Segoe UI,Arial,sans-serif"'
+    tunnel = ["RRRRRRRRRRR", "RRRRRRRRRRR", "RRRRRRRRRRR", "...........", "RRRRRRRRRRR", "RRRRRRRRRRR", "RRRRRRRRRRR"]
+    room = ["RRRRRRRRRRR", "R.........R", "R.........R", "...........", "R.........R", "R.........R", "RRRRRRRRRRR"]
+    braced = ["RRRRRRRRRRR", "R.........R", "R.........R", "...o...o...", "R.........R", "R.........R", "RRRRRRRRRRR"]
+    side = ["GGGGGGGGGGG", "RRRRRRRRRRR", "RRRRRRRRRRR", "R.F.....P.R", "R.F.....F.R", "R.F.....F.R", "RRRRRRRRRRR"]
+    pw, ph = 11 * c, 7 * c
+    gx, gy, head = 44, 34, 50
+    W = 2 * pw + gx + 24
+    H = 2 * (head + ph) + gy + 96
+    out = [f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" role="img" {T} '
+           f'aria-label="Cave-ins: a one-wide tunnel is safe; a wide room braced by posts is safe; a wide room with no posts can cave in; a post is a fence or log column from floor to roof">',
+           f'<rect width="{W}" height="{H}" fill="#f7fbfd"/>']
+    panels = [
+        (tunnel, "1-wide tunnel, from above", "Always safe", True),
+        (braced, "Room with posts, from above", "Safe: all the roof is near a post", True),
+        (room, "Room with no posts, from above", "Can cave in", False),
+        (side, "A post, from the side", "Fence or log, floor to roof", True),
+    ]
+    for k, (rows, title, sub, ok) in enumerate(panels):
+        ox = 12 + (k % 2) * (pw + gx)
+        oy = 12 + (k // 2) * (head + ph + gy) + head
+        col = "#14866d" if ok else "#d2322a"
+        out.append(f'<text x="{ox}" y="{oy - 26}" font-size="14" font-weight="700" fill="#202122">{title}</text>')
+        out.append(f'<text x="{ox}" y="{oy - 9}" font-size="13" fill="{col}" font-weight="600">{"✓" if ok else "✗"} {sub}</text>')
+        out.append(f'<clipPath id="p{k}"><rect x="{ox}" y="{oy}" width="{pw}" height="{ph}"/></clipPath>')
+        out.append(grid_svg(rows, ox, oy, c))
+        if rows is braced:   # each post braces the roof within about 4 blocks
+            for i in (3, 7):
+                out.append(f'<circle clip-path="url(#p{k})" cx="{ox + (i+.5)*c}" cy="{oy + 3.5*c}" r="{4*c}" '
+                           f'fill="rgba(20,134,109,.14)" stroke="#14866d" stroke-width="1.2" stroke-dasharray="4 3"/>')
+        if rows is room:
+            out.append(f'<rect x="{ox + c}" y="{oy + c}" width="{9*c}" height="{5*c}" fill="rgba(210,50,40,.2)" stroke="#d2322a" stroke-width="2" stroke-dasharray="5 4"/>')
+            out.append(f'<text x="{ox + 5.5*c}" y="{oy + 3.9*c}" text-anchor="middle" font-size="13" font-weight="700" fill="#a0231c">roof can fall</text>')
+        if rows is side:
+            out.append(f'<text x="{ox + 2.5*c}" y="{oy + ph + 16}" text-anchor="middle" font-size="12" fill="#14866d">✓ post</text>')
+            out.append(f'<text x="{ox + 8.5*c}" y="{oy + ph + 16}" text-anchor="middle" font-size="12" fill="#d2322a">✗ capped with planks</text>')
+    fy = H - 44
+    for n, line in enumerate(["Grey = solid rock. White = space you have dug out.",
+                              "Dots = posts. Green rings = the roof each post braces (about 4 blocks round it).",
+                              "Only width matters: a tunnel one block wide never caves in, however long or tall."]):
+        out.append(f'<text x="12" y="{fy + n*17}" font-size="12.5" fill="#54595d">{line}</text>')
+    out.append("</svg>")
+    (OUT / "mine.svg").write_text("".join(out))
+    print("wrote mine")
+
+
 def main():
     # 1. Reach: a stone brick shelf vs a log beam off the same wall.
     diagram("reach", [
@@ -163,23 +222,7 @@ def main():
     ], title="A lantern hangs from a chain; stone can barely hang anything",
        notes=[(5.2, 5.6, "Chain: hang 12", "start"), (10.5, 5.2, "Stone: hang 1", "middle")])
 
-    # 5. Cave-ins, seen from ABOVE: width is what matters.
-    diagram("mine", [
-        "RRRRR...................RRRR",
-        "R..........RRRRRRRRRRRRRRRRR",
-        "RRRRR...................RRRR",
-        "RRRRR...................RRRR",
-        "RRRRR.......RRRRR.......RRRR",
-        "RRRRR...o...RRRRR.......RRRR",
-        "RRRRR...................RRRR",
-        "RRRRR...o...RRRRR.......RRRR",
-        "RRRRR.......RRRRR.......RRRR",
-        "RRRRR...................RRRR",
-    ], title="Mine plan seen from above: a one-wide tunnel is safe, a braced room is safe, a wide unbraced room risks a cave-in",
-       notes=[(1, 1.75, "1-wide tunnel: always safe", "start"),
-              (8.5, 10.7, "Room braced by posts", "middle"),
-              (20.5, 10.7, "Wide, no posts: cave-in risk", "middle")],
-       marks=[lambda c: f'<rect x="{17*c}" y="{4*c}" width="{7*c}" height="{5*c}" fill="rgba(210,50,40,.2)" stroke="#d2322a" stroke-width="2" stroke-dasharray="5 4"/>'])
+    mine_panels()
 
     # 6. Ships: wooden hull, wool sail in the top 30%.
     diagram("ship-sail", [
@@ -195,9 +238,9 @@ def main():
         ".PPPPPPPPPPPPPPPPPPP.",
         "~~PPPPPPPPPPPPPPPPP~~",
         "~~~~~~~~~~~~~~~~~~~~~",
-    ], title="A ship: wooden hull below, wool sail in the top 30% of her height",
-       bands=[(0, 3, "rgba(47,100,70,.14)", "top 30%: sail zone")],
-       notes=[(0.2, 1.7, "Wool up here counts", "start"), (0.2, 6.6, "Hull: at least half wood", "start")])
+    ], title="A ship: wooden hull below, wool sail in the top 60% of her height",
+       bands=[(0, 7, "rgba(47,100,70,.14)", "top 60%: sail zone")],
+       notes=[(0.2, 1.7, "Wool anywhere up here counts", "start"), (0.2, 7.75, "Bottom 40%: at least half wood", "start")])
 
 
 if __name__ == "__main__":
