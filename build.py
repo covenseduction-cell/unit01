@@ -8,6 +8,7 @@ Each file in pages/ is an HTML fragment whose first line is a metadata comment:
 Run `python3 build.py` and it writes one .html per page into the site root
 (pages/home.html becomes index.html), plus search-index.json. Nothing to install.
 """
+import hashlib
 import html
 import json
 import re
@@ -80,6 +81,11 @@ def badge(status):
     return f'<span class="status status-{status}" title="{tip}">{label}</span>'
 
 
+def asset(path):
+    digest = hashlib.sha1((ROOT / path).read_bytes()).hexdigest()[:10]
+    return f"{path}?v={digest}"
+
+
 def render(page, pages):
     title = page["title"] if page["slug"] == "home" else f'{page["title"]} · {SITE}'
     heading = "" if page["slug"] == "home" else (
@@ -99,7 +105,7 @@ def render(page, pages):
 <title>{html.escape(title if page["slug"] != "home" else SITE)}</title>
 <meta name="description" content="{desc}">
 <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="{asset('assets/style.css')}">
 </head>
 <body class="page-{page["slug"]}">
 <a class="skip" href="#main">Skip to content</a>
@@ -127,8 +133,8 @@ def render(page, pages):
     </footer>
   </main>
 </div>
-<script src="assets/wiki.js"></script>
-<script src="assets/maps.js"></script>
+<script src="{asset('assets/wiki.js')}"></script>
+<script src="{asset('assets/maps.js')}"></script>
 </body>
 </html>
 """

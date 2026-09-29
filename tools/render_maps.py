@@ -152,7 +152,9 @@ def main():
             side = im.width
             lo = round(side * (22528 - 16384) / 45056)
             im = im.crop((lo, 0, side - lo, side))
-            im.save(OUT / "layers" / f'{it["id"]}.png', optimize=True)
+            # The studio draws traces as dots and planned regions as hatching; soften both into washes.
+            im = im.filter(ImageFilter.GaussianBlur(1.4))
+            im.quantize(64, method=Image.Quantize.FASTOCTREE).save(OUT / "layers" / f'{it["id"]}.png', optimize=True)
             layers.append({"id": it["id"], "group": g["id"], "name": RENAME.get(it["name"], it["name"]), "colour": it["colour"],
                            "share": it.get("share"), "peak": it.get("peak")})
 

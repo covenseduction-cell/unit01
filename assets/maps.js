@@ -41,6 +41,7 @@
     ardcarran: ["coal", "lapis", "emerald", "potato"],
     hell: ["lava", "danger"]
   };
+  var NUDGE = { 6: [26, 14], 8: [-18, -14] };
   var LAND_NAMES = { outer: "Outer Isles", north: "Northlands", spider: "Spiderholme Isles", bread: "Breadbasket", rain: "Rainlands", hell: "The Burning Isle" };
 
   var metaPromise = fetch("maps/maps.json").then(function (r) { return r.json(); });
@@ -96,7 +97,8 @@
 
     meta.labels.forEach(function (lab) {
       var g = el("g", { class: "map-marker" }, svg);
-      var inner = el("g", {}, g);
+      var nd = NUDGE[lab.id] || [0, 0];
+      var inner = el("g", { transform: "translate(" + nd[0] + " " + nd[1] + ")" }, g);
       var name = lab.name;
       var landKey = lab.id === 14 ? "ardcarran" : lab.land;
       var t = el("text", { class: "map-label" + (lab.land === "hell" ? " hell" : ""), x: 0, y: 0, "text-anchor": "middle" }, inner);
@@ -121,8 +123,39 @@
     var ctl = h("div", "map-ctl", view);
     var zin = h("button", "", ctl, "+"); zin.setAttribute("aria-label", "Zoom in");
     var zout = h("button", "", ctl, "−"); zout.setAttribute("aria-label", "Zoom out");
-    var zfit = h("button", "", ctl, "⤢"); zfit.setAttribute("aria-label", "Fit map"); zfit.title = "Fit";
-    var coords = h("div", "map-coords", view, "Drag to pan · scroll or pinch to zoom");
+    var zfit = h("button", "", ctl, "◎"); zfit.setAttribute("aria-label", "Show whole map"); zfit.title = "Show whole map";
+    var zfull = h("button", "", ctl, "⛶"); zfull.setAttribute("aria-label", "Full screen"); zfull.title = "Full screen";
+    var coords = h("div", "map-coords", view, "Drag to move · + and − to zoom");
+    var hint = h("div", "map-hint", view, "");
+    var gate = h("button", "map-gate", view, "Tap to explore the map");
+    var touchy = matchMedia("(pointer: coarse)").matches;
+    var active = !touchy;
+    function setActive(on) {
+      active = on;
+      view.classList.toggle("active", on);
+      gate.hidden = on || !touchy;
+    }
+    setActive(active);
+    gate.addEventListener("click", function () { setActive(true); });
+    var hintTimer;
+    function showHint(t) {
+      hint.textContent = t;
+      hint.classList.add("on");
+      clearTimeout(hintTimer);
+      hintTimer = setTimeout(function () { hint.classList.remove("on"); }, 1400);
+    }
+    function toggleFull(on) {
+      wrap.classList.toggle("map-full", on);
+      document.body.classList.toggle("map-open", on);
+      zfull.textContent = on ? "✕" : "⛶";
+      zfull.title = on ? "Close full screen" : "Full screen";
+      if (on) setActive(true); else if (touchy) setActive(false);
+      setTimeout(fit, 30);
+    }
+    zfull.onclick = function () { toggleFull(!wrap.classList.contains("map-full")); };
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && wrap.classList.contains("map-full")) toggleFull(false);
+    });
 
     // Legend / layer panel
     if (!thematic) {
@@ -177,7 +210,7 @@
     }
     function apply() {
       stage.style.transform = "translate(" + tx + "px," + ty + "px) scale(" + s + ")";
-      var k = 1 / s;
+      var k = Math.max(0.62, Math.min(1, view.clientWidth / 820)) / s;
       markers.forEach(function (m) {
         m.g.setAttribute("transform", "translate(" + m.x + " " + m.y + ") scale(" + k + ")");
       });
@@ -196,6 +229,11 @@
     zfit.onclick = fit;
 
     view.addEventListener("wheel", function (e) {
+      var full = wrap.classList.contains("map-full");
+      if (!full && !e.ctrlKey && !e.metaKey) {
+        showHint("Hold Ctrl (or ⌘) and scroll to zoom, or use + and −");
+        return;
+      }
       e.preventDefault();
       var r = view.getBoundingClientRect();
       zoomAt(Math.exp(-e.deltaY * 0.0022), e.clientX - r.left, e.clientY - r.top);
@@ -203,7 +241,8 @@
 
     var pts = {}, last = null;
     view.addEventListener("pointerdown", function (e) {
-      if (e.target.closest(".map-ctl")) return;
+      if (e.target.closest(".map-ctl, .map-gate")) return;
+      if (e.pointerType !== "mouse" && !active) return;
       view.setPointerCapture(e.pointerId);
       pts[e.pointerId] = [e.clientX, e.clientY];
       last = null;
