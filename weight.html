@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Weight &amp; encumbrance · Settlers III Wiki</title>
+<meta name="description" content="Everything you carry has weight. Carry too much and you slow down; wear heavy armour in deep water and you sink.">
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body class="page-weight">
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="menu-btn" aria-label="Open navigation" aria-expanded="false" aria-controls="sidebar">
+    <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+  </button>
+  <a class="brand" href="index.html"><img src="assets/icon.svg" alt="" width="28" height="28"><span>Settlers <b>III</b></span><small>Wiki</small></a>
+  <div class="search">
+    <input id="search" type="search" placeholder="Search the wiki" autocomplete="off" aria-label="Search the wiki">
+    <div id="results" class="results" role="listbox" hidden></div>
+  </div>
+  <button class="theme-btn" aria-label="Switch light or dark theme" title="Light / dark">
+    <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" fill="currentColor"/></svg>
+  </button>
+</header>
+<div class="layout">
+  <nav id="sidebar" class="sidebar" aria-label="Wiki pages">
+<div class="nav-group"><div class="nav-heading">Start here</div><ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="getting-started.html">Getting started</a></li>
+<li><a href="how-it-plays.html">How Settlers plays</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-heading">The World</div><ul>
+<li><a href="caeldun-isles.html">The Caeldun Isles</a></li>
+<li><a href="lands.html">Lands &amp; regions</a></li>
+<li><a href="resources.html">Resources &amp; ores</a></li>
+<li><a href="wildlife.html">Wildlife</a></li>
+<li><a href="weather.html">Weather &amp; climate</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-heading">Survival</div><ul>
+<li><a href="nutrition.html">Nutrition &amp; thirst</a></li>
+<li><a href="farming.html">Farming &amp; crops</a></li>
+<li><a href="weight.html" class="active" aria-current="page">Weight &amp; encumbrance</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-heading">Building</div><ul>
+<li><a href="gravity.html">Gravity &amp; building</a></li>
+<li><a href="felling.html">Tree felling</a></li>
+<li><a href="living-world.html">The living world</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-heading">Travel</div><ul>
+<li><a href="open-ocean.html">The open ocean</a></li>
+<li><a href="ships.html">Ships &amp; sailing</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-heading">Trade</div><ul>
+<li><a href="economy.html">Gold &amp; shops</a></li>
+<li><a href="panning.html">Panning</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-heading">Reference</div><ul>
+<li><a href="commands.html">Commands</a></li>
+<li><a href="glossary.html">Glossary</a></li>
+<li><a href="roadmap.html">What&#x27;s coming</a></li>
+</ul></div>
+  </nav>
+  <main id="main" class="content">
+    <article>
+<header class="page-head"><div class="crumb">Survival</div><h1>Weight &amp; encumbrance</h1><span class="status status-live" title="Running on the server now.">Live</span><p class="lede">Everything you carry has weight. Carry too much and you slow down; wear heavy armour in deep water and you sink.</p></header>
+<p>Everything in your inventory weighs something. An ordinary block weighs <strong>1</strong>, so a full stack of stone weighs <strong>64</strong>. The more you carry, the slower you get. The idea is to make roads, horses and above all ships worth having.</p>
+<p>Your current load shows as a <strong>⚖ weight bar</strong> above your hotbar.</p>
+
+<h2 id="load-levels">Load levels</h2>
+<table>
+  <tr><th>Level</th><th class="n">Weight</th><th>Roughly</th><th>Effect</th></tr>
+  <tr><td>Normal</td><td class="n">under 120</td><td>up to ~2 stacks of blocks</td><td>None</td></tr>
+  <tr><td><strong>Burdened</strong></td><td class="n">120+</td><td>~2 stacks</td><td>15% slower</td></tr>
+  <tr><td><strong>Heavy</strong></td><td class="n">240+</td><td>~4 stacks</td><td>30% slower, 20% lower jumps, <strong>no sprinting</strong></td></tr>
+  <tr><td><strong>Overloaded</strong></td><td class="n">400+</td><td>~6 stacks</td><td>50% slower, <strong>no jumping</strong>, mining fatigue</td></tr>
+</table>
+<div class="warn"><b>Shulker boxes don't cheat it</b><p>A shulker box counts its own weight (5) plus everything inside it.</p></div>
+
+<h2 id="sinking">Sinking</h2>
+<p>You sink in water if <strong>either</strong> of these is true:</p>
+<ul>
+  <li>Your <strong>total load</strong> is over <strong>400</strong>.</li>
+  <li>Your <strong>worn armour alone</strong> weighs over <strong>30</strong>, which is about a full set of iron.</li>
+</ul>
+<p>So plate armour and deep water don't mix. Cross rivers at fords, build bridges, and take a ship across the sea.</p>
+<div class="tip"><b>Emergency drop</b><p>If you're going under, <strong>sneak and press drop</strong> to throw away your heaviest stack in one go.</p></div>
+
+<h2 id="what-things-weigh">What things weigh</h2>
+<h3 id="armour-per-piece">Armour (per piece)</h3>
+<table>
+  <tr><th>Material</th><th class="n">Each piece</th><th class="n">Full set</th></tr>
+  <tr><td>Leather</td><td class="n">2</td><td class="n">8</td></tr>
+  <tr><td>Chainmail</td><td class="n">5</td><td class="n">20</td></tr>
+  <tr><td>Iron / gold</td><td class="n">8</td><td class="n">32 (you sink)</td></tr>
+  <tr><td>Diamond</td><td class="n">10</td><td class="n">40</td></tr>
+  <tr><td>Netherite</td><td class="n">12</td><td class="n">48</td></tr>
+  <tr><td>Turtle helmet</td><td class="n">6</td><td class="n"></td></tr>
+  <tr><td>Shield</td><td class="n">4</td><td class="n"></td></tr>
+</table>
+<p>The starter kit (chain helmet and leggings, iron chestplate, leather boots) weighs 20 in armour, safely under the sinking limit.</p>
+
+<h3 id="tools-and-weapons">Tools and weapons</h3>
+<table>
+  <tr><th>Material</th><th class="n">Weight</th></tr>
+  <tr><td>Wooden</td><td class="n">2</td></tr>
+  <tr><td>Stone</td><td class="n">3</td></tr>
+  <tr><td>Iron / gold</td><td class="n">4</td></tr>
+  <tr><td>Diamond</td><td class="n">5</td></tr>
+  <tr><td>Netherite</td><td class="n">6</td></tr>
+  <tr><td>Bow, crossbow, trident</td><td class="n">3</td></tr>
+</table>
+
+<h3 id="blocks-and-materials">Blocks and materials</h3>
+<table>
+  <tr><th>Item</th><th class="n">Each</th><th class="n">Stack of 64</th></tr>
+  <tr><td>Anvil</td><td class="n">8</td><td class="n">–</td></tr>
+  <tr><td>Gold / diamond / emerald block</td><td class="n">4</td><td class="n">256</td></tr>
+  <tr><td>Iron / copper block</td><td class="n">3</td><td class="n">192</td></tr>
+  <tr><td>Netherite block</td><td class="n">5</td><td class="n">320</td></tr>
+  <tr><td>Any ordinary solid block (stone, planks, dirt…)</td><td class="n">1</td><td class="n">64</td></tr>
+  <tr><td>Non-solid blocks (rails, ladders, flowers…)</td><td class="n">0.5</td><td class="n">32</td></tr>
+  <tr><td>Wool, leaves, hay bales</td><td class="n">0.3</td><td class="n">19</td></tr>
+  <tr><td>Ingots, gems, lapis, quartz</td><td class="n">0.5</td><td class="n">32</td></tr>
+  <tr><td>Most other items</td><td class="n">0.25</td><td class="n">16</td></tr>
+  <tr><td>Food</td><td class="n">0.2</td><td class="n">13</td></tr>
+  <tr><td>Torches</td><td class="n">0.2</td><td class="n">13</td></tr>
+  <tr><td>Arrows, string, paper, seeds, redstone, gunpowder</td><td class="n">0.1</td><td class="n">6</td></tr>
+  <tr><td>Feathers, saplings, flowers</td><td class="n">0.05</td><td class="n">3</td></tr>
+</table>
+
+<h2 id="moving-heavy-loads">Moving heavy loads</h2>
+<ul>
+  <li><strong>Ships</strong> carry whole chests of cargo with no weight penalty. See <a href="ships.html">Ships</a>.</li>
+  <li><strong>Horses and donkeys</strong> carry you, and a donkey's chest carries cargo.</li>
+  <li><strong>Roads</strong> don't make you lighter, but they make the trip quicker to walk.</li>
+  <li><strong>Carrying money:</strong> a gold block weighs 4 and the nine bars it's made of weigh 4.5, so blocks are the lightest way to carry a lot of gold.</li>
+</ul>
+
+    </article>
+    <footer class="foot">
+      <p>Settlers III is a community Minecraft server. This wiki describes how the server's own plugins work; numbers come from the live configuration and can change as the world is tuned.</p>
+    </footer>
+  </main>
+  <aside class="toc" aria-label="On this page"></aside>
+</div>
+<script src="assets/wiki.js"></script>
+</body>
+</html>

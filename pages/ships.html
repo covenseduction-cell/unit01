@@ -1,0 +1,57 @@
+<!-- title: Ships & sailing | group: Travel | order: 20 | status: live | summary: Build a ship out of ordinary blocks, fill it with cargo and animals, and sail it smoothly anywhere in the world. -->
+<p>Ships are how you cross the sea and move serious cargo. You build one out of normal blocks, however you like, and the server turns it into a vessel that sails smoothly, turns at any angle and docks wherever you drop anchor.</p>
+
+<h2>Building a ship</h2>
+<ol>
+  <li><strong>Build a boat</strong> out of blocks, floating in water. Any shape, any materials, up to <strong>2,000 blocks</strong>. Give it a hull, a deck, chests for the hold, and a block for the wheel.</li>
+  <li><strong>Look at the block you want as the wheel</strong> and run <code>/ship create &lt;name&gt;</code>. That block becomes the helm.</li>
+  <li><strong>Right-click the wheel</strong> and choose <strong>Set sail</strong>.</li>
+</ol>
+<p>The ship is detected from the wheel outward. Everything connected is part of the ship, up to where it meets the sea floor or land. If it touches the ground you'll get a warning. Make sure it's floating free before you set sail.</p>
+<div class="note"><b>No building at sea</b><p>You can't place blocks on a ship while it's under way. Drop anchor first.</p></div>
+
+<h2>Sailing</h2>
+<ol>
+  <li>Right-click the wheel and <strong>Take the wheel</strong>.</li>
+  <li>Steer with your movement keys: <kbd>W</kbd>/<kbd>S</kbd> for throttle, <kbd>A</kbd>/<kbd>D</kbd> to turn.</li>
+  <li>When you arrive, <strong>Drop anchor</strong>. The ship turns back into solid blocks wherever she stopped, so you can walk her decks and open her chests like any build.</li>
+</ol>
+<table>
+  <tr><th>Speed</th><td>Starts at 4 blocks/second; up to 14</td></tr>
+  <tr><td><strong>Turn rate</strong></td><td>25° per second by default, up to 90°</td></tr>
+  <tr><td><strong>Reverse</strong></td><td>40% of forward speed</td></tr>
+</table>
+<p>The helm shows your speed and compass heading. Ships leave a wake of spray, and push anything in their path (mobs, players, boats) out of the way.</p>
+
+<h2>Crew and passengers</h2>
+<p>Anyone standing on deck when the ship sets sail, or who boards her afterwards, is part of the crew. Once she's under way <strong>everybody stays seated</strong>, skipper included. You can look anywhere, but you can't fall off, be shaken loose, suffocate or drown.</p>
+<ul>
+  <li><strong>Getting off at sea:</strong> sneak <strong>twice</strong>. The first sneak asks if you're sure.</li>
+  <li><strong>Getting on:</strong> <code>/ship board</code>, or be aboard when she sails.</li>
+  <li>If the skipper leaves the wheel, the ship drops anchor by herself.</li>
+</ul>
+<p>Crew on a ship are safe from everything the <a href="open-ocean.html">open ocean</a> throws at swimmers.</p>
+
+<h2>Cargo</h2>
+<p>Chests, barrels and other containers on board keep their contents for the whole voyage. You can open them at sea, and everything is saved as you go, so even if the server restarts mid-voyage the ship and her cargo come back where she was.</p>
+<p>Cargo on a ship has <strong>no weight penalty</strong> for you. That's why ships matter: a hold full of stone or iron would leave you <a href="weight.html">overloaded</a> on foot.</p>
+
+<h2>Livestock</h2>
+<p>Animals ride along. Cows, sheep, horses, wolves, anything friendly standing on deck when you sail is carried, up to 40 of them. They're protected from harm while aboard and keep grazing and wandering on deck.</p>
+<ul>
+  <li><strong>Pen them in.</strong> Animals are only carried while they're over the deck. Fences hold them.</li>
+  <li>Hostile mobs are left behind.</li>
+  <li>Boats and minecarts on deck aren't carried.</li>
+</ul>
+<p>This is how you bring chickens home from the Spiderholme Isles, or sheep from the Outer Isles.</p>
+
+<h2>Commands</h2>
+<table>
+  <tr><td><code>/ship create &lt;name&gt;</code></td><td>Make the block you're looking at a ship's wheel.</td></tr>
+  <tr><td><code>/ship menu</code></td><td>Open the wheel menu for the ship you're on.</td></tr>
+  <tr><td><code>/ship board</code> / <code>/ship leave</code></td><td>Join or leave a ship's crew.</td></tr>
+  <tr><td><code>/ship dock</code></td><td>Drop anchor.</td></tr>
+  <tr><td><code>/ship list</code></td><td>Your ships and where they are.</td></tr>
+  <tr><td><code>/ship remove</code></td><td>Stop a build being a ship. The blocks stay where they are.</td></tr>
+  <tr><td><code>/ship</code></td><td>Help.</td></tr>
+</table>

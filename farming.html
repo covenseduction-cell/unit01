@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Farming &amp; crops · Settlers III Wiki</title>
+<meta name="description" content="Crops grow differently in every land. Only the Breadbasket grows everything.">
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body class="page-farming">
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="menu-btn" aria-label="Open navigation" aria-expanded="false" aria-controls="sidebar">
+    <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+  </button>
+  <a class="brand" href="index.html"><img src="assets/icon.svg" alt="" width="28" height="28"><span>Settlers <b>III</b></span><small>Wiki</small></a>
+  <div class="search">
+    <input id="search" type="search" placeholder="Search the wiki" autocomplete="off" aria-label="Search the wiki">
+    <div id="results" class="results" role="listbox" hidden></div>
+  </div>
+  <button class="theme-btn" aria-label="Switch light or dark theme" title="Light / dark">
+    <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" fill="currentColor"/></svg>
+  </button>
+</header>
+<div class="layout">
+  <nav id="sidebar" class="sidebar" aria-label="Wiki pages">
+<div class="nav-group"><div class="nav-heading">Start here</div><ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="getting-started.html">Getting started</a></li>
+<li><a href="how-it-plays.html">How Settlers plays</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-heading">The World</div><ul>
+<li><a href="caeldun-isles.html">The Caeldun Isles</a></li>
+<li><a href="lands.html">Lands &amp; regions</a></li>
+<li><a href="resources.html">Resources &amp; ores</a></li>
+<li><a href="wildlife.html">Wildlife</a></li>
+<li><a href="weather.html">Weather &amp; climate</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-heading">Survival</div><ul>
+<li><a href="nutrition.html">Nutrition &amp; thirst</a></li>
+<li><a href="farming.html" class="active" aria-current="page">Farming &amp; crops</a></li>
+<li><a href="weight.html">Weight &amp; encumbrance</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-heading">Building</div><ul>
+<li><a href="gravity.html">Gravity &amp; building</a></li>
+<li><a href="felling.html">Tree felling</a></li>
+<li><a href="living-world.html">The living world</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-heading">Travel</div><ul>
+<li><a href="open-ocean.html">The open ocean</a></li>
+<li><a href="ships.html">Ships &amp; sailing</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-heading">Trade</div><ul>
+<li><a href="economy.html">Gold &amp; shops</a></li>
+<li><a href="panning.html">Panning</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-heading">Reference</div><ul>
+<li><a href="commands.html">Commands</a></li>
+<li><a href="glossary.html">Glossary</a></li>
+<li><a href="roadmap.html">What&#x27;s coming</a></li>
+</ul></div>
+  </nav>
+  <main id="main" class="content">
+    <article>
+<header class="page-head"><div class="crumb">Survival</div><h1>Farming &amp; crops</h1><span class="status status-partial" title="Some of this is running now; the rest is still being built.">Partly live</span><p class="lede">Crops grow differently in every land. Only the Breadbasket grows everything.</p></header>
+<p>Like ores, <strong>crops are regional</strong>. Each land has a list of what will grow there. Anything not on the list won't grow at all, and some crops on the list grow slowly.</p>
+
+<h2 id="what-grows-where">What grows where</h2>
+<table>
+  <tr><th>Crop</th><th>Outer Isles</th><th>Northlands</th><th>Spiderholme</th><th>Breadbasket</th><th>Rainlands</th></tr>
+  <tr><td>Wheat</td><td>✗</td><td>✗</td><td>✗</td><td>✓</td><td>1% speed</td></tr>
+  <tr><td>Potato</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td><td>✗</td></tr>
+  <tr><td>Beetroot</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td><td>✗</td></tr>
+  <tr><td>Carrot</td><td>✗</td><td>✗</td><td>✗</td><td>✓</td><td>✗</td></tr>
+  <tr><td>Pumpkin</td><td>✗</td><td>✗</td><td>✗</td><td>✓</td><td>✗</td></tr>
+  <tr><td>Melon</td><td>✗</td><td>✗</td><td>✗</td><td>✓</td><td>✗</td></tr>
+  <tr><td>Sugar cane</td><td>✗</td><td>✗</td><td>✗</td><td>✓</td><td>✗</td></tr>
+</table>
+
+<div class="note"><b>Status</b><p>These crop rules are fully enforced in the Rainlands now, where unlisted crops won't grow and wheat grows at 1%. Bone meal is affected too. Enforcement is being extended to the other lands.</p></div>
+
+<h2 id="why-it-matters">Why it matters</h2>
+<p>Bread is the main source of grains, and grains are one of your four <a href="nutrition.html">nutrition</a> meters. Outside the Breadbasket, nobody can grow wheat properly. The Rainlands can technically grow it, but a wheat field there takes a hundred times as long. That makes Breadbasket farmers some of the most important people in the world.</p>
+<p>The hardy lands still eat well on potatoes and beetroot for fruit and veg, and on hunting and fishing for protein. They just need to buy their bread.</p>
+
+<h2 id="sugar-cane">Sugar cane</h2>
+<p>Sugar cane follows vanilla's rule: the block it stands on needs water directly beside it at the same level. On Tirwenn it grows wild along pond edges and streams.</p>
+
+<h2 id="animals">Animals</h2>
+<p>Livestock is regional too. Chickens live only in the Spiderholme Isles. Sheep, horses and donkeys roam wild on the Outer Isles, and the Breadbasket is cattle, pig and chicken country. If you want a mixed farm, you'll have to bring animals home by ship. Ships carry penned animals safely, and horses have been tested at sea. See <a href="ships.html">Ships</a>.</p>
+
+<h2 id="trees-and-saplings">Trees and saplings</h2>
+<p>Trees grow back. Saplings drop a little more often than in vanilla, and in the Caeldun worlds a sapling grows into the region's own tree shape rather than a vanilla one. A pine sapling in Ardveil grows into a proper Scots pine, not a vanilla spruce.Saplings need light (level 9 or more) and take about 20 minutes on average. See <a href="felling.html">Tree felling</a>.</p>
+
+    </article>
+    <footer class="foot">
+      <p>Settlers III is a community Minecraft server. This wiki describes how the server's own plugins work; numbers come from the live configuration and can change as the world is tuned.</p>
+    </footer>
+  </main>
+  <aside class="toc" aria-label="On this page"></aside>
+</div>
+<script src="assets/wiki.js"></script>
+</body>
+</html>

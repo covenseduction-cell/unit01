@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Panning · Settlers III Wiki</title>
+<meta name="description" content="Swirl a bowl in a shallow gravel stream for gold, iron, flint and sand.">
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body class="page-panning">
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="menu-btn" aria-label="Open navigation" aria-expanded="false" aria-controls="sidebar">
+    <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+  </button>
+  <a class="brand" href="index.html"><img src="assets/icon.svg" alt="" width="28" height="28"><span>Settlers <b>III</b></span><small>Wiki</small></a>
+  <div class="search">
+    <input id="search" type="search" placeholder="Search the wiki" autocomplete="off" aria-label="Search the wiki">
+    <div id="results" class="results" role="listbox" hidden></div>
+  </div>
+  <button class="theme-btn" aria-label="Switch light or dark theme" title="Light / dark">
+    <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" fill="currentColor"/></svg>
+  </button>
+</header>
+<div class="layout">
+  <nav id="sidebar" class="sidebar" aria-label="Wiki pages">
+<div class="nav-group"><div class="nav-heading">Start here</div><ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="getting-started.html">Getting started</a></li>
+<li><a href="how-it-plays.html">How Settlers plays</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-heading">The World</div><ul>
+<li><a href="caeldun-isles.html">The Caeldun Isles</a></li>
+<li><a href="lands.html">Lands &amp; regions</a></li>
+<li><a href="resources.html">Resources &amp; ores</a></li>
+<li><a href="wildlife.html">Wildlife</a></li>
+<li><a href="weather.html">Weather &amp; climate</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-heading">Survival</div><ul>
+<li><a href="nutrition.html">Nutrition &amp; thirst</a></li>
+<li><a href="farming.html">Farming &amp; crops</a></li>
+<li><a href="weight.html">Weight &amp; encumbrance</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-heading">Building</div><ul>
+<li><a href="gravity.html">Gravity &amp; building</a></li>
+<li><a href="felling.html">Tree felling</a></li>
+<li><a href="living-world.html">The living world</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-heading">Travel</div><ul>
+<li><a href="open-ocean.html">The open ocean</a></li>
+<li><a href="ships.html">Ships &amp; sailing</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-heading">Trade</div><ul>
+<li><a href="economy.html">Gold &amp; shops</a></li>
+<li><a href="panning.html" class="active" aria-current="page">Panning</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-heading">Reference</div><ul>
+<li><a href="commands.html">Commands</a></li>
+<li><a href="glossary.html">Glossary</a></li>
+<li><a href="roadmap.html">What&#x27;s coming</a></li>
+</ul></div>
+  </nav>
+  <main id="main" class="content">
+    <article>
+<header class="page-head"><div class="crumb">Trade</div><h1>Panning</h1><span class="status status-live" title="Running on the server now.">Live</span><p class="lede">Swirl a bowl in a shallow gravel stream for gold, iron, flint and sand.</p></header>
+<p>Every burn and stream with a gravel bed is a place to pan. It's slow, but it works anywhere in the world and it's the most reliable way to earn your first gold.</p>
+
+<h2 id="how-to-pan">How to pan</h2>
+<ol>
+  <li>Hold a <strong>bowl</strong>.</li>
+  <li>Find <strong>shallow inland water</strong>, at most 2 blocks deep, above sea level, over a <strong>natural gravel</strong> bed.</li>
+  <li><strong>Right-click the water</strong> (within 5 blocks). You'll see <em>Panning…</em> above your hotbar.</li>
+  <li>Hold still for <strong>5 seconds</strong>. Moving more than a block and a half, or switching away from the bowl, cancels it.</li>
+</ol>
+
+<h2 id="what-you-find">What you find</h2>
+<table>
+  <tr><th>Result</th><th class="n">Chance</th></tr>
+  <tr><td>Gold nugget</td><td class="n">2%</td></tr>
+  <tr><td>Iron nugget</td><td class="n">1%</td></tr>
+  <tr><td>Flint</td><td class="n">7%</td></tr>
+  <tr><td>Sand</td><td class="n">90%</td></tr>
+</table>
+<ul>
+  <li>Your bowl breaks <strong>8%</strong> of the time.</li>
+  <li>Each pan has a <strong>15%</strong> chance to wear the gravel out, turning it to coarse dirt. Move along the stream when it does.</li>
+</ul>
+<div class="note"><b>Natural gravel only</b><p>Gravel you placed yourself doesn't pan, and the sea doesn't either. You're working the stream, not a gravel pile.</p></div>
+
+<h2 id="sand">Sand</h2>
+<p>You <strong>can't gather natural sand by hand</strong>. Breaking beach sand drops nothing, which keeps the coastline intact. Panning is where sand comes from, and at 90% of results a patient panner can supply a glassworks. Sand you placed yourself can be picked back up as normal.</p>
+
+<h2 id="feathers">Feathers</h2>
+<p>Not panning, but it's another small source worth knowing: adult chickens drop 2–3 feathers, and wild birds drop 3–6.</p>
+
+    </article>
+    <footer class="foot">
+      <p>Settlers III is a community Minecraft server. This wiki describes how the server's own plugins work; numbers come from the live configuration and can change as the world is tuned.</p>
+    </footer>
+  </main>
+  <aside class="toc" aria-label="On this page"></aside>
+</div>
+<script src="assets/wiki.js"></script>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ships &amp; sailing · Settlers III Wiki</title>
+<meta name="description" content="Build a ship out of ordinary blocks, fill it with cargo and animals, and sail it smoothly anywhere in the world.">
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body class="page-ships">
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="menu-btn" aria-label="Open navigation" aria-expanded="false" aria-controls="sidebar">
+    <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+  </button>
+  <a class="brand" href="index.html"><img src="assets/icon.svg" alt="" width="28" height="28"><span>Settlers <b>III</b></span><small>Wiki</small></a>
+  <div class="search">
+    <input id="search" type="search" placeholder="Search the wiki" autocomplete="off" aria-label="Search the wiki">
+    <div id="results" class="results" role="listbox" hidden></div>
+  </div>
+  <button class="theme-btn" aria-label="Switch light or dark theme" title="Light / dark">
+    <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" fill="currentColor"/></svg>
+  </button>
+</header>
+<div class="layout">
+  <nav id="sidebar" class="sidebar" aria-label="Wiki pages">
+<div class="nav-group"><div class="nav-heading">Start here</div><ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="getting-started.html">Getting started</a></li>
+<li><a href="how-it-plays.html">How Settlers plays</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-heading">The World</div><ul>
+<li><a href="caeldun-isles.html">The Caeldun Isles</a></li>
+<li><a href="lands.html">Lands &amp; regions</a></li>
+<li><a href="resources.html">Resources &amp; ores</a></li>
+<li><a href="wildlife.html">Wildlife</a></li>
+<li><a href="weather.html">Weather &amp; climate</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-heading">Survival</div><ul>
+<li><a href="nutrition.html">Nutrition &amp; thirst</a></li>
+<li><a href="farming.html">Farming &amp; crops</a></li>
+<li><a href="weight.html">Weight &amp; encumbrance</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-heading">Building</div><ul>
+<li><a href="gravity.html">Gravity &amp; building</a></li>
+<li><a href="felling.html">Tree felling</a></li>
+<li><a href="living-world.html">The living world</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-heading">Travel</div><ul>
+<li><a href="open-ocean.html">The open ocean</a></li>
+<li><a href="ships.html" class="active" aria-current="page">Ships &amp; sailing</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-heading">Trade</div><ul>
+<li><a href="economy.html">Gold &amp; shops</a></li>
+<li><a href="panning.html">Panning</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-heading">Reference</div><ul>
+<li><a href="commands.html">Commands</a></li>
+<li><a href="glossary.html">Glossary</a></li>
+<li><a href="roadmap.html">What&#x27;s coming</a></li>
+</ul></div>
+  </nav>
+  <main id="main" class="content">
+    <article>
+<header class="page-head"><div class="crumb">Travel</div><h1>Ships &amp; sailing</h1><span class="status status-live" title="Running on the server now.">Live</span><p class="lede">Build a ship out of ordinary blocks, fill it with cargo and animals, and sail it smoothly anywhere in the world.</p></header>
+<p>Ships are how you cross the sea and move serious cargo. You build one out of normal blocks, however you like, and the server turns it into a vessel that sails smoothly, turns at any angle and docks wherever you drop anchor.</p>
+
+<h2 id="building-a-ship">Building a ship</h2>
+<ol>
+  <li><strong>Build a boat</strong> out of blocks, floating in water. Any shape, any materials, up to <strong>2,000 blocks</strong>. Give it a hull, a deck, chests for the hold, and a block for the wheel.</li>
+  <li><strong>Look at the block you want as the wheel</strong> and run <code>/ship create &lt;name&gt;</code>. That block becomes the helm.</li>
+  <li><strong>Right-click the wheel</strong> and choose <strong>Set sail</strong>.</li>
+</ol>
+<p>The ship is detected from the wheel outward. Everything connected is part of the ship, up to where it meets the sea floor or land. If it touches the ground you'll get a warning. Make sure it's floating free before you set sail.</p>
+<div class="note"><b>No building at sea</b><p>You can't place blocks on a ship while it's under way. Drop anchor first.</p></div>
+
+<h2 id="sailing">Sailing</h2>
+<ol>
+  <li>Right-click the wheel and <strong>Take the wheel</strong>.</li>
+  <li>Steer with your movement keys: <kbd>W</kbd>/<kbd>S</kbd> for throttle, <kbd>A</kbd>/<kbd>D</kbd> to turn.</li>
+  <li>When you arrive, <strong>Drop anchor</strong>. The ship turns back into solid blocks wherever she stopped, so you can walk her decks and open her chests like any build.</li>
+</ol>
+<table>
+  <tr><th>Speed</th><td>Starts at 4 blocks/second; up to 14</td></tr>
+  <tr><td><strong>Turn rate</strong></td><td>25° per second by default, up to 90°</td></tr>
+  <tr><td><strong>Reverse</strong></td><td>40% of forward speed</td></tr>
+</table>
+<p>The helm shows your speed and compass heading. Ships leave a wake of spray, and push anything in their path (mobs, players, boats) out of the way.</p>
+
+<h2 id="crew-and-passengers">Crew and passengers</h2>
+<p>Anyone standing on deck when the ship sets sail, or who boards her afterwards, is part of the crew. Once she's under way <strong>everybody stays seated</strong>, skipper included. You can look anywhere, but you can't fall off, be shaken loose, suffocate or drown.</p>
+<ul>
+  <li><strong>Getting off at sea:</strong> sneak <strong>twice</strong>. The first sneak asks if you're sure.</li>
+  <li><strong>Getting on:</strong> <code>/ship board</code>, or be aboard when she sails.</li>
+  <li>If the skipper leaves the wheel, the ship drops anchor by herself.</li>
+</ul>
+<p>Crew on a ship are safe from everything the <a href="open-ocean.html">open ocean</a> throws at swimmers.</p>
+
+<h2 id="cargo">Cargo</h2>
+<p>Chests, barrels and other containers on board keep their contents for the whole voyage. You can open them at sea, and everything is saved as you go, so even if the server restarts mid-voyage the ship and her cargo come back where she was.</p>
+<p>Cargo on a ship has <strong>no weight penalty</strong> for you. That's why ships matter: a hold full of stone or iron would leave you <a href="weight.html">overloaded</a> on foot.</p>
+
+<h2 id="livestock">Livestock</h2>
+<p>Animals ride along. Cows, sheep, horses, wolves, anything friendly standing on deck when you sail is carried, up to 40 of them. They're protected from harm while aboard and keep grazing and wandering on deck.</p>
+<ul>
+  <li><strong>Pen them in.</strong> Animals are only carried while they're over the deck. Fences hold them.</li>
+  <li>Hostile mobs are left behind.</li>
+  <li>Boats and minecarts on deck aren't carried.</li>
+</ul>
+<p>This is how you bring chickens home from the Spiderholme Isles, or sheep from the Outer Isles.</p>
+
+<h2 id="commands">Commands</h2>
+<table>
+  <tr><td><code>/ship create &lt;name&gt;</code></td><td>Make the block you're looking at a ship's wheel.</td></tr>
+  <tr><td><code>/ship menu</code></td><td>Open the wheel menu for the ship you're on.</td></tr>
+  <tr><td><code>/ship board</code> / <code>/ship leave</code></td><td>Join or leave a ship's crew.</td></tr>
+  <tr><td><code>/ship dock</code></td><td>Drop anchor.</td></tr>
+  <tr><td><code>/ship list</code></td><td>Your ships and where they are.</td></tr>
+  <tr><td><code>/ship remove</code></td><td>Stop a build being a ship. The blocks stay where they are.</td></tr>
+  <tr><td><code>/ship</code></td><td>Help.</td></tr>
+</table>
+
+    </article>
+    <footer class="foot">
+      <p>Settlers III is a community Minecraft server. This wiki describes how the server's own plugins work; numbers come from the live configuration and can change as the world is tuned.</p>
+    </footer>
+  </main>
+  <aside class="toc" aria-label="On this page"></aside>
+</div>
+<script src="assets/wiki.js"></script>
+</body>
+</html>

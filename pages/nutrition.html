@@ -1,0 +1,91 @@
+<!-- title: Nutrition & thirst | group: Survival | order: 10 | status: live | summary: Four meters (protein, fruit and veg, grains and thirst) that a varied diet keeps topped up. -->
+<p>On top of the vanilla hunger bar, you have <strong>four needs</strong>. They show as a bar at the top of the screen whenever you're in a Caeldun world, and <code>/stats</code> prints them in chat.</p>
+
+<div class="meter"><span>Protein</span><div class="bar"><i style="width:82%"></i></div></div>
+<div class="meter"><span>Fruit &amp; veg</span><div class="bar"><i style="width:64%"></i></div></div>
+<div class="meter"><span>Grains</span><div class="bar"><i style="width:47%"></i></div></div>
+<div class="meter"><span>Thirst</span><div class="bar"><i style="width:30%;background:var(--sea)"></i></div></div>
+<p></p>
+
+<h2>How fast they fall</h2>
+<table>
+  <tr><th>Meter</th><th class="n">Lost per Minecraft day</th><th>Full to empty</th></tr>
+  <tr><td>Protein</td><td class="n">3.5%</td><td>about 28 days (roughly 9½ hours of play)</td></tr>
+  <tr><td>Fruit &amp; veg</td><td class="n">3.5%</td><td>about 28 days</td></tr>
+  <tr><td>Grains</td><td class="n">3.5%</td><td>about 28 days</td></tr>
+  <tr><td>Thirst</td><td class="n">14%</td><td>about 7 days (roughly 2⅓ hours of play)</td></tr>
+</table>
+<p>A Minecraft day is 20 real minutes. Everyone starts at 100%.</p>
+
+<h3>Thirst</h3>
+<ul>
+  <li><strong>Heat</strong> makes you thirsty 1.65× faster, in desert, badlands, savanna and jungle biomes.</li>
+  <li><strong>Cold</strong> slows thirst to 0.7×, in snowy, frozen and high mountain biomes.</li>
+  <li><strong>Moving</strong> adds up to 35% more thirst, depending on how far you travel.</li>
+  <li><strong>Standing in water</strong> stops thirst falling and slowly restores it, at about 1% every 10 minutes. That's a trickle, not a drink.</li>
+</ul>
+
+<h2>Drinks</h2>
+<table>
+  <tr><th>Drink</th><th class="n">Thirst</th><th>Also</th></tr>
+  <tr><td>Water bottle</td><td class="n">+20</td><td></td></tr>
+  <tr><td>Milk bucket</td><td class="n">+12</td><td>+4 protein</td></tr>
+  <tr><td>Honey bottle</td><td class="n">+4</td><td>+2 fruit &amp; veg</td></tr>
+</table>
+<div class="tip"><b>Carry water</b><p>Water bottles are by far the best way to stay hydrated. Five of them take you from empty to full.</p></div>
+
+<h2>What goes wrong when you run low</h2>
+<p>Effects are driven by whichever meter is <strong>lowest</strong>. They're checked every 5 seconds.</p>
+<table>
+  <tr><th>Lowest meter</th><th>Chance each check</th><th>Effect</th></tr>
+  <tr><td>26% or below</td><td class="n">12%</td><td>Brief nausea (3 s) or slowness (5 s)</td></tr>
+  <tr><td>12% or below</td><td class="n">30%</td><td>Blindness, longer nausea, or strong slowness</td></tr>
+  <tr><td>5% or below</td><td class="n">55%</td><td>Poison, plus one of the serious effects</td></tr>
+</table>
+<p>You'll get a quiet chat warning when a meter crosses a low milestone.</p>
+
+<h2>Dying</h2>
+<p>Death takes <strong>5%</strong> off every meter, but respawning never leaves a meter below <strong>27%</strong>.</p>
+
+<h2>Food values</h2>
+<p>When you eat, a note above your hotbar shows exactly what the food restored. Cooked food is much better than raw, and a stew covers several groups at once.</p>
+<table>
+  <tr><th>Food</th><th class="n">Protein</th><th class="n">Fruit &amp; veg</th><th class="n">Grains</th><th class="n">Thirst</th></tr>
+  <tr><td>Cooked beef / porkchop</td><td class="n">10</td><td class="n">–</td><td class="n">–</td><td class="n">–</td></tr>
+  <tr><td>Cooked chicken / mutton / salmon</td><td class="n">8</td><td class="n">–</td><td class="n">–</td><td class="n">–</td></tr>
+  <tr><td>Cooked cod / rabbit</td><td class="n">6</td><td class="n">–</td><td class="n">–</td><td class="n">–</td></tr>
+  <tr><td>Raw beef / porkchop / rabbit</td><td class="n">4</td><td class="n">–</td><td class="n">–</td><td class="n">–</td></tr>
+  <tr><td>Raw chicken / mutton / cod / salmon</td><td class="n">3</td><td class="n">–</td><td class="n">–</td><td class="n">–</td></tr>
+  <tr><td>Rotten flesh</td><td class="n">3</td><td class="n">–</td><td class="n">–</td><td class="n">–</td></tr>
+  <tr><td>Rabbit stew</td><td class="n">6</td><td class="n">4</td><td class="n">3</td><td class="n">3</td></tr>
+  <tr><td>Mushroom stew / suspicious stew</td><td class="n">1</td><td class="n">7</td><td class="n">–</td><td class="n">3</td></tr>
+  <tr><td>Beetroot soup</td><td class="n">–</td><td class="n">8</td><td class="n">–</td><td class="n">3</td></tr>
+  <tr><td>Golden carrot</td><td class="n">–</td><td class="n">9</td><td class="n">–</td><td class="n">1</td></tr>
+  <tr><td>Golden apple</td><td class="n">–</td><td class="n">8</td><td class="n">–</td><td class="n">1</td></tr>
+  <tr><td>Baked potato</td><td class="n">–</td><td class="n">6</td><td class="n">–</td><td class="n">–</td></tr>
+  <tr><td>Apple</td><td class="n">–</td><td class="n">5</td><td class="n">–</td><td class="n">1</td></tr>
+  <tr><td>Carrot</td><td class="n">–</td><td class="n">4</td><td class="n">–</td><td class="n">1</td></tr>
+  <tr><td>Melon slice</td><td class="n">–</td><td class="n">3</td><td class="n">–</td><td class="n">2</td></tr>
+  <tr><td>Sweet berries / glow berries</td><td class="n">–</td><td class="n">3</td><td class="n">–</td><td class="n">1</td></tr>
+  <tr><td>Potato (raw)</td><td class="n">–</td><td class="n">2</td><td class="n">–</td><td class="n">–</td></tr>
+  <tr><td>Beetroot</td><td class="n">–</td><td class="n">2</td><td class="n">–</td><td class="n">1</td></tr>
+  <tr><td>Dried kelp</td><td class="n">–</td><td class="n">2</td><td class="n">–</td><td class="n">–</td></tr>
+  <tr><td><strong>Bread</strong></td><td class="n">–</td><td class="n">–</td><td class="n"><strong>7</strong></td><td class="n">–</td></tr>
+  <tr><td>Pumpkin pie</td><td class="n">–</td><td class="n">4</td><td class="n">6</td><td class="n">–</td></tr>
+  <tr><td>Cookie</td><td class="n">–</td><td class="n">–</td><td class="n">4</td><td class="n">–</td></tr>
+  <tr><td>Cake (per slice)</td><td class="n">–</td><td class="n">1</td><td class="n">3</td><td class="n">–</td></tr>
+</table>
+<p>Any food not listed spreads its value evenly across protein, fruit and veg, and grains.</p>
+
+<h2>Where to find each group</h2>
+<ul>
+  <li><strong>Grains</strong> almost all come from wheat: bread, cookies, pie and cake. Wheat only grows properly in the <a href="farming.html">Breadbasket</a>, so most settlements will need to trade for it.</li>
+  <li><strong>Fruit &amp; veg</strong>: potatoes and beetroot grow in most lands. Apples drop from oaks.</li>
+  <li><strong>Protein</strong>: hunt and fish. Deer, boar, goats and fish are common in the wilder lands.</li>
+</ul>
+
+<h2>Commands</h2>
+<table>
+  <tr><td><code>/stats</code></td><td>Show your four meters in chat.</td></tr>
+  <tr><td><code>/needs hud on|off</code></td><td>Show or hide the meters bar. It hides by itself while you're riding or sailing.</td></tr>
+</table>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gold &amp; shops · Settlers III Wiki</title>
+<meta name="description" content="Money is real gold you carry. Players run the shops, through shop keepers that trade one item each.">
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body class="page-economy">
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="menu-btn" aria-label="Open navigation" aria-expanded="false" aria-controls="sidebar">
+    <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+  </button>
+  <a class="brand" href="index.html"><img src="assets/icon.svg" alt="" width="28" height="28"><span>Settlers <b>III</b></span><small>Wiki</small></a>
+  <div class="search">
+    <input id="search" type="search" placeholder="Search the wiki" autocomplete="off" aria-label="Search the wiki">
+    <div id="results" class="results" role="listbox" hidden></div>
+  </div>
+  <button class="theme-btn" aria-label="Switch light or dark theme" title="Light / dark">
+    <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" fill="currentColor"/></svg>
+  </button>
+</header>
+<div class="layout">
+  <nav id="sidebar" class="sidebar" aria-label="Wiki pages">
+<div class="nav-group"><div class="nav-heading">Start here</div><ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="getting-started.html">Getting started</a></li>
+<li><a href="how-it-plays.html">How Settlers plays</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-heading">The World</div><ul>
+<li><a href="caeldun-isles.html">The Caeldun Isles</a></li>
+<li><a href="lands.html">Lands &amp; regions</a></li>
+<li><a href="resources.html">Resources &amp; ores</a></li>
+<li><a href="wildlife.html">Wildlife</a></li>
+<li><a href="weather.html">Weather &amp; climate</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-heading">Survival</div><ul>
+<li><a href="nutrition.html">Nutrition &amp; thirst</a></li>
+<li><a href="farming.html">Farming &amp; crops</a></li>
+<li><a href="weight.html">Weight &amp; encumbrance</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-heading">Building</div><ul>
+<li><a href="gravity.html">Gravity &amp; building</a></li>
+<li><a href="felling.html">Tree felling</a></li>
+<li><a href="living-world.html">The living world</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-heading">Travel</div><ul>
+<li><a href="open-ocean.html">The open ocean</a></li>
+<li><a href="ships.html">Ships &amp; sailing</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-heading">Trade</div><ul>
+<li><a href="economy.html" class="active" aria-current="page">Gold &amp; shops</a></li>
+<li><a href="panning.html">Panning</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-heading">Reference</div><ul>
+<li><a href="commands.html">Commands</a></li>
+<li><a href="glossary.html">Glossary</a></li>
+<li><a href="roadmap.html">What&#x27;s coming</a></li>
+</ul></div>
+  </nav>
+  <main id="main" class="content">
+    <article>
+<header class="page-head"><div class="crumb">Trade</div><h1>Gold &amp; shops</h1><span class="status status-live" title="Running on the server now.">Live</span><p class="lede">Money is real gold you carry. Players run the shops, through shop keepers that trade one item each.</p></header>
+<h2 id="gold-is-money">Gold is money</h2>
+<p>There's no virtual balance. <strong>Gold is the currency</strong>, carried in your inventory:</p>
+<table>
+  <tr><th>Unit</th><th class="n">Worth</th></tr>
+  <tr><td>1 gold block</td><td class="n">9 bars = 81 nuggets</td></tr>
+  <tr><td>1 gold bar (ingot)</td><td class="n">9 nuggets</td></tr>
+  <tr><td>1 gold nugget</td><td class="n">1 nugget</td></tr>
+</table>
+<p>Only plain gold counts. Renamed or enchanted gold doesn't. Change is given automatically, so if you pay with a bar for a 3-nugget item, you get 6 nuggets back.</p>
+<p>Gold comes from the Outer Isles, where it's in the rock, and from <a href="panning.html">panning</a> streams anywhere. Because money has to be mined or panned, it's genuinely scarce.</p>
+
+<h2 id="using-a-shop">Using a shop</h2>
+<p>Shops are run by <strong>shop keepers</strong>: NPCs that stand where their owner put them. Right-click one to trade.</p>
+<ul>
+  <li><strong>Selling shops</strong> sell you an item. Click a price to buy. Items may come in bundles of 1, 8 or 64.</li>
+  <li><strong>Buying shops</strong> buy an item from you. Click to sell them your goods for gold.</li>
+</ul>
+<p>A purchase only goes through if everything fits in your inventory, so nothing is dropped or lost.</p>
+
+<h2 id="running-your-own-shop">Running your own shop</h2>
+<ol>
+  <li>Stand where you want the keeper and run <code>/shop create &lt;name&gt;</code>.</li>
+  <li>Right-click your keeper to set it up:
+    <ul>
+      <li><strong>Pick the item</strong> by clicking it in your inventory. Each shop trades one item.</li>
+      <li><strong>Choose the mode:</strong> <strong>Selling</strong> (you sell to customers) or <strong>Buying</strong> (you buy from them).</li>
+      <li><strong>Set prices</strong> by clicking the blocks, bars and nuggets: left-click adds one, right-click takes one off.</li>
+      <li>Choose which bundles to offer: 1s, and optionally 8s and 64s.</li>
+    </ul>
+  </li>
+  <li><strong>Selling:</strong> add stock, and come back to collect your takings.<br><strong>Buying:</strong> deposit gold for the keeper to pay with, and collect what it has bought.</li>
+</ol>
+<p>Stock and gold are held <strong>by the keeper</strong>, not in chests, so nobody can break in and take them. A shop holds up to 1,728 items (27 stacks) of stock.</p>
+
+<h3 id="co-owners">Co-owners</h3>
+<p>A shop can have several owners. Any owner can restock, set prices and collect. Only the founder can close the shop, and it has to be empty first.</p>
+
+<h3 id="limits">Limits</h3>
+<ul>
+  <li>Up to <strong>5 shops</strong> per player.</li>
+  <li>Prices go up to 99 gold blocks.</li>
+</ul>
+
+<h2 id="shop-commands">Shop commands</h2>
+<table>
+  <tr><td><code>/shop create &lt;name&gt;</code></td><td>Open a shop where you stand.</td></tr>
+  <tr><td><code>/shop list</code></td><td>Your shops.</td></tr>
+  <tr><td><code>/shop &lt;name&gt;</code></td><td>Stock, gold and owners.</td></tr>
+  <tr><td><code>/shop &lt;name&gt; add &lt;player&gt;</code></td><td>Add a co-owner.</td></tr>
+  <tr><td><code>/shop &lt;name&gt; remove &lt;player&gt;</code></td><td>Remove a co-owner.</td></tr>
+  <tr><td><code>/shop &lt;name&gt; move</code></td><td>Move the keeper to where you are.</td></tr>
+  <tr><td><code>/shop &lt;name&gt; rename &lt;new&gt;</code></td><td>Rename the shop.</td></tr>
+  <tr><td><code>/shop &lt;name&gt; skin</code></td><td>Change the keeper's look.</td></tr>
+  <tr><td><code>/shop &lt;name&gt; delete</code></td><td>Close the shop (empty it first).</td></tr>
+  <tr><td><code>/shop help</code></td><td>All of the above, in game.</td></tr>
+</table>
+
+<h2 id="trade-between-lands">Trade between lands</h2>
+<p>Shops make most sense where the trade routes meet. A Breadbasket farmer selling bread, a Rainlands smith buying coal, or a harbour-side keeper buying diamonds off Outer Isles miners are all how the world's economy is meant to work. See <a href="lands.html">Lands &amp; regions</a> for who has what.</p>
+
+    </article>
+    <footer class="foot">
+      <p>Settlers III is a community Minecraft server. This wiki describes how the server's own plugins work; numbers come from the live configuration and can change as the world is tuned.</p>
+    </footer>
+  </main>
+  <aside class="toc" aria-label="On this page"></aside>
+</div>
+<script src="assets/wiki.js"></script>
+</body>
+</html>
