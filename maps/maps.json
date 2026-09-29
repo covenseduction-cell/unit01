@@ -133,7 +133,7 @@
   {
    "id": "crops",
    "label": "Crops",
-   "about": "Strength = growth speed on arable ground · Enforced in some regions; elsewhere the plan"
+   "about": "Strength = growth speed on arable ground · Enforced in game"
   },
   {
    "id": "minerals",
@@ -283,7 +283,7 @@
    "group": "crops",
    "name": "Potato",
    "colour": "#b98a52",
-   "share": 53.9,
+   "share": 82.0,
    "peak": "normal speed"
   },
   {
@@ -299,7 +299,7 @@
    "group": "crops",
    "name": "Beetroot",
    "colour": "#b8324f",
-   "share": 53.9,
+   "share": 82.0,
    "peak": "normal speed"
   },
   {
@@ -307,7 +307,7 @@
    "group": "crops",
    "name": "Pumpkin",
    "colour": "#e39a2c",
-   "share": 3.2,
+   "share": 1.9,
    "peak": "normal speed"
   },
   {

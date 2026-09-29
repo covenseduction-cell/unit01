@@ -33,6 +33,10 @@
 <li><a href="forestry-map.html">Forestry map</a></li>
 <li><a href="crops-map.html">Crops map</a></li>
 </ul></div>
+<div class="nav-group"><div class="nav-heading">Custom features</div><ul>
+<li><a href="custom-crafting.html">Custom crafting &amp; items</a></li>
+<li><a href="banned.html">Banned &amp; changed</a></li>
+</ul></div>
 <div class="nav-group"><div class="nav-heading">The World</div><ul>
 <li><a href="caeldun-isles.html">The Caeldun Isles</a></li>
 <li><a href="lands.html">Lands &amp; regions</a></li>
@@ -80,7 +84,7 @@
   <li><strong>Spans supported at both ends go further.</strong> Arches and bridges work because each half helps hold up the middle.</li>
   <li><strong>The block doing the carrying decides.</strong> A stone block on the end of a long oak beam is fine, because the beam still has reach to spare. A stone shelf sticking out of a stone wall runs out after a couple of blocks.</li>
 </ul>
-<div class="note"><b>Only what you build</b><p>Natural terrain never falls: hills, cliffs and cave roofs stay put. Gravity only applies to blocks that players have placed.</p></div>
+<div class="note"><b>Built blocks and dug mines</b><p>These support rules apply to blocks players have placed. Natural hills, cliffs and caves stay put, but <a href="#cave-ins">mines you dig</a> can cave in.</p></div>
 
 <h2 id="material-strengths">Material strengths</h2>
 <table>
@@ -121,6 +125,24 @@
 </ul>
 <div class="warn"><b>Buildings age</b><p>Stone brick near water slowly turns mossy and cracked over time (see <a href="living-world.html">The living world</a>), and weathered masonry is weaker than fresh. An old building nobody maintains can eventually come down by itself. Oxidised copper is also weaker than fresh copper.</p></div>
 
+<h2 id="cave-ins">Cave-ins</h2>
+<p>Mines you dig into natural rock can collapse. Caves and halls that were already there when the world was made are stable; only the spaces players open are judged. Cave-ins are live on the full Caeldun map.</p>
+<ul>
+  <li><strong>Width is what matters.</strong> A tunnel 1 block wide is always safe, however tall, and so is a crossing of two of them. The wider the open span of roof you dig out, the riskier each further block you mine.</li>
+  <li><strong>Height makes wide rooms worse.</strong> Up to 3 blocks of headroom is free; beyond that, a wide room gets steadily riskier.</li>
+  <li><strong>Soil roofs are weaker.</strong> A roof of dirt, clay or mud is twice as likely to fall as rock.</li>
+  <li><strong>Shallow digs are safe.</strong> Roofs with less than 4 blocks of cover above them aren't judged.</li>
+  <li>You're told the risk in chat as you dig.</li>
+</ul>
+<h3 id="posts">Posts</h3>
+<p>Brace the roof with <strong>posts</strong>: a column of wooden fence, logs or scaffolding standing on the floor and pressed right up against the rock roof. A post braces the roof within about 4 blocks of it (posts every 8 blocks cover a tunnel). Planks don't count, and a post that stops short of the roof holds nothing.</p>
+<table>
+  <tr><th>Roof</th><th>Risk</th><th>What falls</th></tr>
+  <tr><td>Braced by a post</td><td>A tenth of normal</td><td>At most a stone or three</td></tr>
+  <tr><td>No post nearby</td><td>Up to double</td><td>Usually a few stones, but sometimes a real collapse of up to 24 blocks</td></tr>
+</table>
+<p>Falling rock does <strong>3 damage per block</strong> to anyone underneath. You get a crack-and-creak warning first: 1.5 seconds for a small fall, 3 seconds for a big one. Jamming a post in during the warning still saves it.</p>
+
 <h2 id="protected-land">Protected land</h2>
 <p>Collapses respect protected regions and claims. They won't tear through land you aren't allowed to build in.</p>
 
@@ -131,6 +153,6 @@
   </main>
 </div>
 <script src="assets/wiki.js?v=984c0c9cb3"></script>
-<script src="assets/maps.js?v=b07ed30ebc"></script>
+<script src="assets/maps.js?v=9de7b7d7e1"></script>
 </body>
 </html>

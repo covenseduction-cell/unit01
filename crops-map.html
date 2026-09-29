@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Crops map · Settlers III Wiki</title>
-<meta name="description" content="Where each crop will grow in the Caeldun Isles. Only the Breadbasket grows everything.">
+<meta name="description" content="Where each crop will grow in the Caeldun Isles. Potato and beetroot grow everywhere; pumpkins only on the Spiderholme Isles.">
 <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="assets/style.css?v=7b34dfeeec">
 </head>
@@ -32,6 +32,10 @@
 <li><a href="mining-map.html">Mining map</a></li>
 <li><a href="forestry-map.html">Forestry map</a></li>
 <li><a href="crops-map.html" class="active" aria-current="page">Crops map</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-heading">Custom features</div><ul>
+<li><a href="custom-crafting.html">Custom crafting &amp; items</a></li>
+<li><a href="banned.html">Banned &amp; changed</a></li>
 </ul></div>
 <div class="nav-group"><div class="nav-heading">The World</div><ul>
 <li><a href="caeldun-isles.html">The Caeldun Isles</a></li>
@@ -67,24 +71,24 @@
   </nav>
   <main id="main" class="content">
     <article>
-<header class="page-head"><div class="crumb">Maps</div><h1>Crops map</h1><p class="lede">Where each crop will grow in the Caeldun Isles. Only the Breadbasket grows everything.</p></header>
-<div class="map" data-map="crops" data-on="crop-wheat,crop-potato,crop-carrot"></div>
+<header class="page-head"><div class="crumb">Maps</div><h1>Crops map</h1><p class="lede">Where each crop will grow in the Caeldun Isles. Potato and beetroot grow everywhere; pumpkins only on the Spiderholme Isles.</p></header>
+<div class="map" data-map="crops" data-on="crop-wheat,crop-pumpkin,crop-carrot"></div>
 <p>Each colour shows arable ground where that crop will grow. Tick crops on and off below the map.</p>
 
 <h2 id="crop-summary">Crop summary</h2>
 <table>
   <tr><th>Crop</th><th>Where it grows</th><th class="n">Arable land</th></tr>
-  <tr><td>Potato</td><td>Everywhere except the Rainlands</td><td class="n">53.9%</td></tr>
-  <tr><td>Beetroot</td><td>Everywhere except the Rainlands</td><td class="n">53.9%</td></tr>
+  <tr><td>Potato</td><td>Everywhere, at full speed</td><td class="n">82.0%</td></tr>
+  <tr><td>Beetroot</td><td>Everywhere, at full speed</td><td class="n">82.0%</td></tr>
   <tr><td>Wheat</td><td>The Breadbasket at full speed; the Rainlands at 1% speed</td><td class="n">31.3%</td></tr>
   <tr><td>Carrot</td><td>The Breadbasket only</td><td class="n">3.2%</td></tr>
-  <tr><td>Pumpkin</td><td>The Breadbasket only</td><td class="n">3.2%</td></tr>
+  <tr><td>Pumpkin</td><td>The Spiderholme Isles only: Ruannis, Maigor and Cannoch</td><td class="n">1.9%</td></tr>
   <tr><td>Melon</td><td>The Breadbasket only</td><td class="n">3.2%</td></tr>
   <tr><td>Sugar cane</td><td>The Breadbasket only, right beside water</td><td class="n">0.4%</td></tr>
 </table>
 <p>"Arable land" is the share of all land where that crop can be farmed. Most of the wheat country on the map is Rainlands ground, where wheat grows at a hundredth of normal speed. Only a small share of the world grows grain properly.</p>
 
-<div class="note"><b>Status</b><p>Crop rules are fully enforced in the Rainlands now and are being extended to every land. See <a href="farming.html">Farming &amp; crops</a>.</p></div>
+<p>These rules are enforced in game: a crop won't grow outside the lands listed here, and bone meal won't help. See <a href="farming.html">Farming &amp; crops</a>.</p>
 
     </article>
     <footer class="foot">
@@ -93,6 +97,6 @@
   </main>
 </div>
 <script src="assets/wiki.js?v=984c0c9cb3"></script>
-<script src="assets/maps.js?v=b07ed30ebc"></script>
+<script src="assets/maps.js?v=9de7b7d7e1"></script>
 </body>
 </html>

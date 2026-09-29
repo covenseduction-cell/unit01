@@ -18,7 +18,7 @@ ROOT = Path(__file__).parent
 PAGES = ROOT / "pages"
 SITE = "Settlers III Wiki"
 
-GROUPS = ["Start here", "Maps", "The World", "Survival", "Building", "Travel", "Trade", "Reference"]
+GROUPS = ["Start here", "Maps", "Custom features", "The World", "Survival", "Building", "Travel", "Trade", "Reference"]
 STATUS = {
     "live": ("Live", "Running on the server now."),
     "partial": ("Partly live", "Some of this is running now; the rest is still being built."),

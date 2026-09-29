@@ -23,22 +23,23 @@
     beetroot: '<path d="M12 21c-5-3-6-7-4-10h8c2 3 1 7-4 10z" fill="#b8324f" stroke="#5e1426"/><path d="M12 11V4M12 8l-4-4M12 8l4-4" stroke="#3f8a3a" stroke-width="1.6" fill="none"/>',
     carrot: '<path d="M6 7l12 3-11 12z" fill="#f08a2a" stroke="#8a4410"/><path d="M17 9l3-5M17 9l5-1" stroke="#3f8a3a" stroke-width="1.6"/>',
     melon: '<circle cx="12" cy="12" r="8.5" fill="#7cc45a" stroke="#2f6a20"/><path d="M12 3.5v17M5 7c4 3 4 7 0 10M19 7c-4 3-4 7 0 10" stroke="#2f6a20" fill="none"/>',
+    pumpkin: '<ellipse cx="12" cy="14" rx="9" ry="7" fill="#e39a2c" stroke="#8a4a0c"/><path d="M12 7v14M7 8c-2 3-2 9 0 12M17 8c2 3 2 9 0 12" stroke="#8a4a0c" fill="none" stroke-width=".9"/><path d="M12 7c0-2 1-3 3-4" stroke="#3f7a2a" stroke-width="1.8" fill="none"/>',
     danger: '<path d="M12 2l10 19H2z" fill="#f5c02e" stroke="#7a4a00"/><path d="M12 8v6" stroke="#222" stroke-width="2.2"/><circle cx="12" cy="17.5" r="1.3" fill="#222"/>'
   };
   var ICON_NAMES = {
     diamond: "Diamond", emerald: "Emerald", lapis: "Lapis lazuli", coal: "Coal", iron: "Iron", gold: "Gold",
     copper: "Copper", redstone: "Redstone", quartz: "Quartz", amethyst: "Amethyst, sulfur & cinnabar", lava: "Lava",
-    wheat: "Wheat", potato: "Potato", beetroot: "Beetroot", carrot: "Carrot, pumpkin & more", melon: "Melon & sugar cane",
+    wheat: "Wheat", potato: "Potato", beetroot: "Beetroot", carrot: "Carrot", melon: "Melon & sugar cane", pumpkin: "Pumpkin",
     danger: "Danger"
   };
   // What each region is known for (its land's rich resources).
   var REGION_ICONS = {
     outer: ["diamond", "redstone", "gold", "potato", "beetroot"],
     north: ["coal", "quartz", "amethyst", "lava", "potato", "beetroot"],
-    spider: ["lapis", "potato", "beetroot"],
+    spider: ["lapis", "pumpkin", "potato", "beetroot"],
     bread: ["emerald", "copper", "wheat", "carrot", "melon"],
-    rain: ["iron", "wheat"],
-    ardcarran: ["coal", "lapis", "emerald", "potato"],
+    rain: ["iron", "wheat", "potato", "beetroot"],
+    ardcarran: ["coal", "lapis", "emerald", "potato", "beetroot"],
     hell: ["lava", "danger"]
   };
   var NUDGE = { 6: [26, 14], 8: [-18, -14] };
