@@ -6,11 +6,7 @@
 <title>Lands &amp; regions · Settlers III Wiki</title>
 <meta name="description" content="Five lands, fifteen regions. Each land has its own climate, ores, crops and animals, and none of them has everything.">
 <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
-<script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
 </head>
 <body class="page-lands">
 <a class="skip" href="#main">Skip to content</a>
@@ -18,14 +14,11 @@
   <button class="menu-btn" aria-label="Open navigation" aria-expanded="false" aria-controls="sidebar">
     <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
   </button>
-  <a class="brand" href="index.html"><img src="assets/icon.svg" alt="" width="28" height="28"><span>Settlers <b>III</b></span><small>Wiki</small></a>
+  <a class="brand" href="index.html"><img src="assets/icon.svg" alt="" width="28" height="28"><span>Settlers <b>III</b> Wiki</span><small>The Caeldun Isles</small></a>
   <div class="search">
     <input id="search" type="search" placeholder="Search the wiki" autocomplete="off" aria-label="Search the wiki">
     <div id="results" class="results" role="listbox" hidden></div>
   </div>
-  <button class="theme-btn" aria-label="Switch light or dark theme" title="Light / dark">
-    <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" fill="currentColor"/></svg>
-  </button>
 </header>
 <div class="layout">
   <nav id="sidebar" class="sidebar" aria-label="Wiki pages">
@@ -33,6 +26,12 @@
 <li><a href="index.html">Home</a></li>
 <li><a href="getting-started.html">Getting started</a></li>
 <li><a href="how-it-plays.html">How Settlers plays</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-heading">Maps</div><ul>
+<li><a href="world-map.html">World map</a></li>
+<li><a href="mining-map.html">Mining map</a></li>
+<li><a href="forestry-map.html">Forestry map</a></li>
+<li><a href="crops-map.html">Crops map</a></li>
 </ul></div>
 <div class="nav-group"><div class="nav-heading">The World</div><ul>
 <li><a href="caeldun-isles.html">The Caeldun Isles</a></li>
@@ -63,12 +62,13 @@
 <li><a href="commands.html">Commands</a></li>
 <li><a href="glossary.html">Glossary</a></li>
 <li><a href="roadmap.html">What&#x27;s coming</a></li>
+<li><a href="inspiration.html">Inspiration &amp; credits</a></li>
 </ul></div>
   </nav>
   <main id="main" class="content">
     <article>
 <header class="page-head"><div class="crumb">The World</div><h1>Lands &amp; regions</h1><span class="status status-live" title="Running on the server now.">Live</span><p class="lede">Five lands, fifteen regions. Each land has its own climate, ores, crops and animals, and none of them has everything.</p></header>
-<p>The Caeldun Isles are divided into <strong>five lands</strong>. A land decides what grows, what you can dig up and what lives there. Within each land are named <strong>regions</strong>, each based on a real island or stretch of coast.</p>
+<p>The Caeldun Isles are divided into <strong>five lands</strong>. A land decides what grows, what you can dig up and what lives there. Within each land are named <strong>regions</strong>, each with its own character.</p>
 
 <div class="cards">
   <a class="card" href="#the-outer-isles"><h3 id="outer-isles"><span class="swatch" style="background:#c8b489"></span>Outer Isles</h3><p>Windswept, treeless. Diamond, redstone, a little gold.</p></a>
@@ -87,27 +87,27 @@
   <dt>Animals</dt><dd>Wild sheep, wild horses and donkeys, rabbits. Bears and wolves at lower numbers. Barren skeletons and native tribes roam the moors.</dd>
 </dl>
 <table>
-  <tr><th>#</th><th>Region</th><th>Based on</th></tr>
-  <tr><td>1</td><td>Fearnmuir</td><td>The Uists and Benbecula</td></tr>
-  <tr><td>2</td><td>Dunbarra</td><td>Barra (its harbour, Castleross, is Castlebay)</td></tr>
-  <tr><td>15</td><td>South Harris</td><td>A burning island. See <a href="#south-harris">below</a>.</td></tr>
+  <tr><th>#</th><th>Region</th><th>Character</th></tr>
+  <tr><td>1</td><td>Fearnmuir</td><td>A long chain of low, loch-riddled islands</td></tr>
+  <tr><td>2</td><td>Dunbarra</td><td>A rugged island group around the harbour of Castleross</td></tr>
+  <tr><td>15</td><td>The Burning Isle</td><td>See <a href="#the-burning-isle">below</a>.</td></tr>
 </table>
 </section>
 
 <section class="land" style="--land:#7fb0a0">
 <h2 id="the-northlands">The Northlands</h2>
 <dl>
-  <dt>Climate</dt><dd>Cool, with a low snowline and dense forest: Caledonian pinewood in the north, Atlantic oakwood around the Cuillin.</dd>
+  <dt>Climate</dt><dd>Cool, with a low snowline and dense forest: old pinewood in the north, Atlantic oakwood around the jagged southern mountains.</dd>
   <dt>Crops</dt><dd>Hardy crops only: potato and beetroot.</dd>
   <dt>Ores</dt><dd><strong>Coal</strong> is common and <strong>quartz</strong> fairly common. <strong>Amethyst</strong>, <strong>sulfur</strong> and <strong>cinnabar</strong> veins line the caves. The <strong>only lava</strong> in the world is here. Iron and copper are very rare. Folded layers of granite, diorite, andesite, tuff and basalt run under the surface. Clay pockets surface as mud in the pinewoods.</dd>
   <dt>Animals</dt><dd>Wolves (in packs), brown bears, red deer, boar, wild goats, foxes, wildcats, frogs and giant bull frogs by the water, eagles overhead. Spirits haunt the high ground.</dd>
 </dl>
 <table>
-  <tr><th>#</th><th>Region</th><th>Based on</th></tr>
-  <tr><td>3</td><td>Ardveil</td><td>Trotternish, north-east Skye: big Scots pine forest under the Trotternish ridge</td></tr>
-  <tr><td>4</td><td>Dùnross</td><td>North-west Skye</td></tr>
-  <tr><td>5</td><td>Sgorrachan</td><td>The Cuillin and south Skye: oak woodland, Highland burns, a rugged coast</td></tr>
-  <tr><td>14</td><td>Ardcarran</td><td>The Applecross peninsula on the mainland. Also has <strong>lapis</strong>, a little iron and emerald.</td></tr>
+  <tr><th>#</th><th>Region</th><th>Character</th></tr>
+  <tr><td>3</td><td>Ardveil</td><td>Big pine forest under a long ridge of cliffs</td></tr>
+  <tr><td>4</td><td>Dùnross</td><td>Pinewood, moor and sea lochs in the north-west</td></tr>
+  <tr><td>5</td><td>Sgorrachan</td><td>Jagged mountains, oak woodland, tumbling burns and a rugged coast</td></tr>
+  <tr><td>14</td><td>Ardcarran</td><td>A remote peninsula on the eastern mainland. Also has <strong>lapis</strong>, a little iron and emerald.</td></tr>
 </table>
 </section>
 
@@ -120,10 +120,10 @@
   <dt>Animals</dt><dd><strong>Chickens live here and nowhere else</strong>. Here they're black grouse. Giant spiders infest the woods of Maigor. No wolves, no bears. Whales and giant squid in the deep water offshore.</dd>
 </dl>
 <table>
-  <tr><th>#</th><th>Region</th><th>Based on</th></tr>
-  <tr><td>6</td><td>Ruannis</td><td>Rùm</td></tr>
-  <tr><td>7</td><td>Maigor</td><td>Eigg</td></tr>
-  <tr><td>8</td><td>Cannoch</td><td>Canna, at the edge of the abyss</td></tr>
+  <tr><th>#</th><th>Region</th><th>Character</th></tr>
+  <tr><td>6</td><td>Ruannis</td><td>A mountainous island</td></tr>
+  <tr><td>7</td><td>Maigor</td><td>A small island of cliffs and dark woods</td></tr>
+  <tr><td>8</td><td>Cannoch</td><td>Fern and alder island at the edge of the abyss</td></tr>
 </table>
 </section>
 
@@ -136,9 +136,9 @@
   <dt>Animals</dt><dd>Farm country: cattle, chickens and pigs. On the islands themselves, no large predators and no hostile humanoids. Instead there are crabs, toads, newts, foxes, muntjac, island boar, palm spiders, and clouds of mosquitoes and midges.</dd>
 </dl>
 <table>
-  <tr><th>#</th><th>Region</th><th>Based on</th></tr>
-  <tr><td>9</td><td>Colvane</td><td>Coll</td></tr>
-  <tr><td>10</td><td>Tirwenn</td><td>Tiree: the Golden Coast, where new settlers arrive</td></tr>
+  <tr><th>#</th><th>Region</th><th>Character</th></tr>
+  <tr><td>9</td><td>Colvane</td><td>A low, rocky farming island</td></tr>
+  <tr><td>10</td><td>Tirwenn</td><td>The Golden Coast, where new settlers arrive</td></tr>
 </table>
 </section>
 
@@ -151,15 +151,15 @@
   <dt>Animals</dt><dd>Wolves, brown bears, red deer, boar, wild goats, foxes, frogs and newts. Spirits on the high ground.</dd>
 </dl>
 <table>
-  <tr><th>#</th><th>Region</th><th>Based on</th></tr>
-  <tr><td>11</td><td>Morvethan</td><td>Morvern and north Mull: the most mountainous region, around Ben More</td></tr>
-  <tr><td>12</td><td>Ionfarr</td><td>The Ross of Mull and Iona</td></tr>
-  <tr><td>13</td><td>Ardnamor</td><td>Ardnamurchan</td></tr>
+  <tr><th>#</th><th>Region</th><th>Character</th></tr>
+  <tr><td>11</td><td>Morvethan</td><td>The most mountainous region, with the highest peak in the world</td></tr>
+  <tr><td>12</td><td>Ionfarr</td><td>Ancient oakwood over a long, low peninsula</td></tr>
+  <tr><td>13</td><td>Ardnamor</td><td>A wild peninsula reaching out to the west</td></tr>
 </table>
 </section>
 
-<h2 id="south-harris">South Harris: the burning island</h2>
-<p>At the southern end of Harris lies an island unlike anything else in the Caeldun Isles. Sheer cliffs about 60 blocks high ring the coast. Inland, the grass gives way to cinders, blackstone and magma, with fires burning and cracks glowing with lava. There's no rain, only falling ash under a dark sky. Below are huge flat cave halls and lava.</p>
+<h2 id="the-burning-isle">The Burning Isle</h2>
+<p>At the far northern end of the Outer Isles lies an island unlike anything else in the Caeldun Isles. Sheer cliffs about 60 blocks high ring the coast. Inland, the grass gives way to cinders, blackstone and magma, with fires burning and cracks glowing with lava. There's no rain, only falling ash under a dark sky. Below are huge flat cave halls and lava.</p>
 <p>It's home to hell toads, blood bats, blazes and, at its heart, a dragon. Go well armed, and remember that you'll need a ship to get there.</p>
 <div class="warn"><b>Danger</b><p>This is the most dangerous place in the world, and there's no water to drink.</p></div>
 
@@ -171,8 +171,8 @@
       <p>Settlers III is a community Minecraft server. This wiki describes how the server's own plugins work; numbers come from the live configuration and can change as the world is tuned.</p>
     </footer>
   </main>
-  <aside class="toc" aria-label="On this page"></aside>
 </div>
 <script src="assets/wiki.js"></script>
+<script src="assets/maps.js"></script>
 </body>
 </html>

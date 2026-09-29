@@ -14,16 +14,6 @@
     }
   });
 
-  // Theme toggle
-  document.querySelector(".theme-btn").addEventListener("click", function () {
-    var root = document.documentElement;
-    var dark = root.dataset.theme
-      ? root.dataset.theme === "dark"
-      : matchMedia("(prefers-color-scheme: dark)").matches;
-    root.dataset.theme = dark ? "light" : "dark";
-    try { localStorage.setItem("theme", root.dataset.theme); } catch (e) {}
-  });
-
   // Keep the current page visible in the sidebar
   var active = document.querySelector(".sidebar a.active");
   if (active) active.scrollIntoView({ block: "center" });
@@ -37,29 +27,18 @@
     w.appendChild(t);
   });
 
-  // On this page
-  var toc = document.querySelector(".toc");
+  // Contents box, before the first section heading
   var heads = document.querySelectorAll("article h2[id]");
-  if (toc && heads.length > 1) {
-    var h = document.createElement("div");
-    h.className = "toc-h";
-    h.textContent = "On this page";
-    toc.appendChild(h);
-    var links = [];
-    heads.forEach(function (el) {
-      var a = document.createElement("a");
-      a.href = "#" + el.id;
-      a.textContent = el.textContent;
-      toc.appendChild(a);
-      links.push([el, a]);
-    });
-    var spy = function () {
-      var cur = links[0];
-      links.forEach(function (l) { if (l[0].getBoundingClientRect().top < 120) cur = l; });
-      links.forEach(function (l) { l[1].classList.toggle("on", l === cur); });
-    };
-    addEventListener("scroll", spy, { passive: true });
-    spy();
+  if (heads.length > 2 && !document.body.classList.contains("page-home")) {
+    var box = document.createElement("nav");
+    box.className = "contents";
+    box.setAttribute("aria-label", "Contents");
+    var html = '<div class="c-h">Contents</div><ol>';
+    heads.forEach(function (el) { html += '<li><a href="#' + el.id + '">' + el.textContent + "</a></li>"; });
+    box.innerHTML = html + "</ol>";
+    var anchor = heads[0];
+    while (anchor.parentNode.tagName !== "ARTICLE") anchor = anchor.parentNode;
+    anchor.parentNode.insertBefore(box, anchor);
   }
 
   // Search

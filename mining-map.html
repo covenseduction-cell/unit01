@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mining map · Settlers III Wiki</title>
+<meta name="description" content="Where every ore and cave mineral in the Caeldun Isles is found, drawn from the world generator&#x27;s own ore rules.">
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="page-mining-map">
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="menu-btn" aria-label="Open navigation" aria-expanded="false" aria-controls="sidebar">
+    <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+  </button>
+  <a class="brand" href="index.html"><img src="assets/icon.svg" alt="" width="28" height="28"><span>Settlers <b>III</b> Wiki</span><small>The Caeldun Isles</small></a>
+  <div class="search">
+    <input id="search" type="search" placeholder="Search the wiki" autocomplete="off" aria-label="Search the wiki">
+    <div id="results" class="results" role="listbox" hidden></div>
+  </div>
+</header>
+<div class="layout">
+  <nav id="sidebar" class="sidebar" aria-label="Wiki pages">
+<div class="nav-group"><div class="nav-heading">Start here</div><ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="getting-started.html">Getting started</a></li>
+<li><a href="how-it-plays.html">How Settlers plays</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-heading">Maps</div><ul>
+<li><a href="world-map.html">World map</a></li>
+<li><a href="mining-map.html" class="active" aria-current="page">Mining map</a></li>
+<li><a href="forestry-map.html">Forestry map</a></li>
+<li><a href="crops-map.html">Crops map</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-heading">The World</div><ul>
+<li><a href="caeldun-isles.html">The Caeldun Isles</a></li>
+<li><a href="lands.html">Lands &amp; regions</a></li>
+<li><a href="resources.html">Resources &amp; ores</a></li>
+<li><a href="wildlife.html">Wildlife</a></li>
+<li><a href="weather.html">Weather &amp; climate</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-heading">Survival</div><ul>
+<li><a href="nutrition.html">Nutrition &amp; thirst</a></li>
+<li><a href="farming.html">Farming &amp; crops</a></li>
+<li><a href="weight.html">Weight &amp; encumbrance</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-heading">Building</div><ul>
+<li><a href="gravity.html">Gravity &amp; building</a></li>
+<li><a href="felling.html">Tree felling</a></li>
+<li><a href="living-world.html">The living world</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-heading">Travel</div><ul>
+<li><a href="open-ocean.html">The open ocean</a></li>
+<li><a href="ships.html">Ships &amp; sailing</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-heading">Trade</div><ul>
+<li><a href="economy.html">Gold &amp; shops</a></li>
+<li><a href="panning.html">Panning</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-heading">Reference</div><ul>
+<li><a href="commands.html">Commands</a></li>
+<li><a href="glossary.html">Glossary</a></li>
+<li><a href="roadmap.html">What&#x27;s coming</a></li>
+<li><a href="inspiration.html">Inspiration &amp; credits</a></li>
+</ul></div>
+  </nav>
+  <main id="main" class="content">
+    <article>
+<header class="page-head"><div class="crumb">Maps</div><h1>Mining map</h1><p class="lede">Where every ore and cave mineral in the Caeldun Isles is found, drawn from the world generator's own ore rules.</p></header>
+<div class="map" data-map="mining" data-on="ore-iron,ore-coal,ore-diamond,ore-gold,ore-lapis-lazuli,ore-emerald"></div>
+<p>Tick ores on and off below the map. <strong>Dots</strong> mean a trace: dig anywhere there and you'll find a little. <strong>Solid colour</strong> means rich ground, and the stronger the colour, the more ore per chunk. The map is drawn from the same rules the world generator uses, so it's accurate to the blocks underground.</p>
+
+<h2 id="ore-summary">Ore summary</h2>
+<table>
+  <tr><th>Ore</th><th>Home land</th><th class="n">Found on</th><th class="n">Rich on</th><th>At its richest</th></tr>
+  <tr><td>Iron</td><td>Rainlands</td><td class="n">all land (trace)</td><td class="n">34.5%</td><td>~877 blocks per chunk</td></tr>
+  <tr><td>Coal</td><td>Northlands</td><td class="n">all land (trace)</td><td class="n">37.4%</td><td>~854 blocks per chunk</td></tr>
+  <tr><td>Copper</td><td>Breadbasket pockets</td><td class="n">all land (trace)</td><td class="n">1.1%</td><td>~185 blocks per chunk</td></tr>
+  <tr><td>Quartz</td><td>Northlands</td><td class="n">38.3%</td><td class="n">38.3%</td><td>~72 blocks per chunk</td></tr>
+  <tr><td>Redstone</td><td>Outer Isles</td><td class="n">20.4%</td><td class="n">10.3%</td><td>~105 blocks per chunk</td></tr>
+  <tr><td>Diamond</td><td>Outer Isles</td><td class="n">20.4%</td><td class="n">9.7%</td><td>~81 blocks per chunk</td></tr>
+  <tr><td>Gold</td><td>Outer Isles</td><td class="n">20.4%</td><td class="n">0.5%</td><td>~48 blocks per chunk</td></tr>
+  <tr><td>Emerald</td><td>Breadbasket</td><td class="n">5.3%</td><td class="n">5.3%</td><td>~59 blocks per chunk</td></tr>
+  <tr><td>Lapis lazuli</td><td>Spiderholme Isles</td><td class="n">5.3%</td><td class="n">5.3%</td><td>~56 blocks per chunk</td></tr>
+</table>
+<p>"Found on" and "Rich on" are shares of all the land in the world.</p>
+
+<h2 id="cave-minerals">Cave minerals</h2>
+<table>
+  <tr><th>Mineral</th><th>Where</th><th class="n">Rich on</th></tr>
+  <tr><td>Amethyst</td><td>Veins in Northlands cave walls</td><td class="n">6.9%</td></tr>
+  <tr><td>Sulfur and cinnabar</td><td>Veins in Northlands cave walls</td><td class="n">8.4%</td></tr>
+  <tr><td>Lava</td><td>Deep Northlands caves: the only lava in the world</td><td class="n">6.3%</td></tr>
+  <tr><td>Clay</td><td>Pockets in the pinewoods of Ardveil and Dùnross, surfacing as mud</td><td class="n">6.2%</td></tr>
+</table>
+
+<h2 id="tips-for-prospectors">Tips for prospectors</h2>
+<ul>
+  <li><strong>Dig under high ground.</strong> Ores sit in depth bands, and a mountain puts more of the band beneath you. Iron and emerald are richest under hills.</li>
+  <li><strong>Gold is rare in rock</strong>: rich on only half a percent of the land. <a href="panning.html">Panning</a> streams is a steadier source.</li>
+  <li><strong>Plan the haul home.</strong> A stack of iron blocks weighs 192. See <a href="weight.html">Weight</a> and <a href="ships.html">Ships</a>.</li>
+</ul>
+<p>See also <a href="resources.html">Resources &amp; ores</a>.</p>
+
+    </article>
+    <footer class="foot">
+      <p>Settlers III is a community Minecraft server. This wiki describes how the server's own plugins work; numbers come from the live configuration and can change as the world is tuned.</p>
+    </footer>
+  </main>
+</div>
+<script src="assets/wiki.js"></script>
+<script src="assets/maps.js"></script>
+</body>
+</html>

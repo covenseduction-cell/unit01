@@ -4,13 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Settlers III Wiki</title>
-<meta name="description" content="The player guide to Settlers III, a slow, regional survival server set in the islands and highlands of Celtic Britain.">
+<meta name="description" content="The player guide to Settlers III, a slow, regional survival server set in a rain-washed Atlantic archipelago.">
 <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
-<script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
 </head>
 <body class="page-home">
 <a class="skip" href="#main">Skip to content</a>
@@ -18,14 +14,11 @@
   <button class="menu-btn" aria-label="Open navigation" aria-expanded="false" aria-controls="sidebar">
     <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
   </button>
-  <a class="brand" href="index.html"><img src="assets/icon.svg" alt="" width="28" height="28"><span>Settlers <b>III</b></span><small>Wiki</small></a>
+  <a class="brand" href="index.html"><img src="assets/icon.svg" alt="" width="28" height="28"><span>Settlers <b>III</b> Wiki</span><small>The Caeldun Isles</small></a>
   <div class="search">
     <input id="search" type="search" placeholder="Search the wiki" autocomplete="off" aria-label="Search the wiki">
     <div id="results" class="results" role="listbox" hidden></div>
   </div>
-  <button class="theme-btn" aria-label="Switch light or dark theme" title="Light / dark">
-    <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" fill="currentColor"/></svg>
-  </button>
 </header>
 <div class="layout">
   <nav id="sidebar" class="sidebar" aria-label="Wiki pages">
@@ -33,6 +26,12 @@
 <li><a href="index.html" class="active" aria-current="page">Home</a></li>
 <li><a href="getting-started.html">Getting started</a></li>
 <li><a href="how-it-plays.html">How Settlers plays</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-heading">Maps</div><ul>
+<li><a href="world-map.html">World map</a></li>
+<li><a href="mining-map.html">Mining map</a></li>
+<li><a href="forestry-map.html">Forestry map</a></li>
+<li><a href="crops-map.html">Crops map</a></li>
 </ul></div>
 <div class="nav-group"><div class="nav-heading">The World</div><ul>
 <li><a href="caeldun-isles.html">The Caeldun Isles</a></li>
@@ -63,56 +62,94 @@
 <li><a href="commands.html">Commands</a></li>
 <li><a href="glossary.html">Glossary</a></li>
 <li><a href="roadmap.html">What&#x27;s coming</a></li>
+<li><a href="inspiration.html">Inspiration &amp; credits</a></li>
 </ul></div>
   </nav>
   <main id="main" class="content">
     <article>
 
-<section class="hero">
-  <div class="kicker">A Minecraft survival server</div>
-  <h1>Settlers III</h1>
-  <p>A huge, slow world of Atlantic islands and highlands. Every region is rich in something and short of something else, so you'll need roads, horses, ships and trade to get anywhere.</p>
-  <div class="btns">
-    <a class="btn btn-primary" href="getting-started.html">Getting started</a>
-    <a class="btn btn-ghost" href="caeldun-isles.html">Explore the world</a>
+<div class="welcome">
+  <h1>Welcome to the Settlers III Wiki</h1>
+  <p>The player guide to a slow, regional Minecraft survival server set in a rain-washed Atlantic archipelago.</p>
+</div>
+
+<div class="mp-box mp-grey" style="margin-bottom:14px">
+  <h2 id="the-caeldun-isles-full-map-page-mining-forestry-crops">The Caeldun Isles <span style="font-weight:normal;font-size:13px">· <a href="world-map.html">full map page</a> · <a href="mining-map.html">mining</a> · <a href="forestry-map.html">forestry</a> · <a href="crops-map.html">crops</a></span></h2>
+  <div class="map" data-map="world" data-height="640px" style="margin:0"></div>
+</div>
+
+<div class="mp-grid">
+  <div class="mp-box mp-green">
+    <h2 id="about-settlers-iii">About Settlers III</h2>
+    <div>
+      <p>Settlers III takes its idea from <em>The Settlers</em> I and II: <strong>resources are regional and progress is slow</strong>. Iron comes from the Rainlands, emerald from the Breadbasket, diamond from the Outer Isles, and wheat will barely grow in half the world. Getting materials from where they are to where you need them is the game.</p>
+      <p>The world is the <a href="caeldun-isles.html">Caeldun Isles</a>, a huge archipelago of islands, sea lochs and mountains, with Atlantic rainforest, old pinewood, machair and peat-dark lochs. It rains a lot.</p>
+      <div class="quote">No elytra farms on day two. Slow progress, real distance and trade between regions will give us an interesting geopolitical situation, without anyone having to roleplay.</div>
+    </div>
   </div>
-</section>
 
-<h2 id="what-kind-of-server-is-this">What kind of server is this?</h2>
-<p>Settlers III takes its idea from <em>The Settlers</em> I and II: <strong>resources are regional and progress is slow</strong>. You won't find everything you need where you start. Iron comes from the Rainlands, emerald from the Breadbasket, diamond from the Outer Isles, and wheat will barely grow in half the world. Getting materials from where they are to where you need them is the game.</p>
-<p>The world looks and feels like Celtic Britain: the west coast of Scotland, the Hebrides and the Highlands. Biomes are fewer and more realistic than vanilla, with Atlantic rainforest, Caledonian pinewood, machair, heather moor and peat-dark lochs. It rains a lot.</p>
+  <div class="mp-box mp-blue">
+    <h2 id="new-here">New here?</h2>
+    <div>
+      <ul>
+        <li><a href="getting-started.html"><strong>Getting started</strong></a>: where you arrive, what you carry, your first days</li>
+        <li><a href="how-it-plays.html"><strong>How Settlers plays</strong></a>: everything that differs from vanilla, on one page</li>
+        <li><a href="lands.html"><strong>Lands &amp; regions</strong></a>: what each part of the world offers</li>
+        <li><a href="commands.html"><strong>Commands</strong></a>: every player command</li>
+      </ul>
+      <p>New settlers arrive on a long sand beach on the warm, gentle island of <a href="lands.html#the-breadbasket">Tirwenn</a>.</p>
+    </div>
+  </div>
 
-<div class="quote">No elytra farms on day two. Slow progress, real distance and trade between regions will give us an interesting geopolitical situation, without anyone having to roleplay.</div>
+  <div class="mp-box mp-gold">
+    <h2 id="the-core-rules">The core rules</h2>
+    <div>
+      <ul>
+        <li><a href="resources.html"><strong>Regional scarcity</strong></a>: every land has its own ores, crops and animals. Nobody is self-sufficient.</li>
+        <li><a href="weight.html"><strong>Weight</strong></a>: carry too much and you slow to a crawl; heavy armour sinks you.</li>
+        <li><a href="gravity.html"><strong>Gravity</strong></a>: buildings must hold themselves up.</li>
+        <li><a href="open-ocean.html"><strong>The open ocean</strong></a>: kills swimmers and small boats. Build a <a href="ships.html">ship</a>.</li>
+        <li><a href="nutrition.html"><strong>Nutrition</strong></a>: protein, fruit and veg, grains and thirst.</li>
+        <li><a href="economy.html"><strong>Gold is money</strong></a>: players run the shops.</li>
+      </ul>
+    </div>
+  </div>
 
-<h2 id="the-pillars">The pillars</h2>
-<div class="pillars">
-  <div class="pillar"><h3 id="regional-scarcity">Regional scarcity</h3><p>Each land has its own ores, crops and animals. Nobody is self-sufficient. <a href="resources.html">Resources →</a></p></div>
-  <div class="pillar"><h3 id="weight-matters">Weight matters</h3><p>Carry too much and you slow to a crawl. Wear heavy armour into deep water and you sink. <a href="weight.html">Weight →</a></p></div>
-  <div class="pillar"><h3 id="gravity">Gravity</h3><p>Anything you build has to hold itself up. Timber props, arches and careful masonry keep the roof off your head. <a href="gravity.html">Gravity →</a></p></div>
-  <div class="pillar"><h3 id="ships-not-swimming">Ships, not swimming</h3><p>The open ocean kills swimmers and small boats. Build a real ship, load it with cargo and sail it. <a href="ships.html">Ships →</a></p></div>
-  <div class="pillar"><h3 id="nutrition">Nutrition</h3><p>Protein, fruit and veg, grains and water. A diet of steak alone won't keep you healthy. <a href="nutrition.html">Nutrition →</a></p></div>
-  <div class="pillar"><h3 id="real-gold">Real gold</h3><p>Money is physical gold: nuggets, bars and blocks. Trade through shop keepers you set up yourself. <a href="economy.html">Economy →</a></p></div>
+  <div class="mp-box mp-grey">
+    <h2 id="the-five-lands">The five lands</h2>
+    <div>
+      <table>
+        <tr><th>Land</th><th>Known for</th></tr>
+        <tr><td><a href="lands.html#the-outer-isles">Outer Isles</a></td><td>Diamond, redstone, gold; wild sheep and horses</td></tr>
+        <tr><td><a href="lands.html#the-northlands">Northlands</a></td><td>Coal, quartz, amethyst, lava; wolves and bears</td></tr>
+        <tr><td><a href="lands.html#the-spiderholme-isles">Spiderholme Isles</a></td><td>Lapis; the only chickens; whales offshore</td></tr>
+        <tr><td><a href="lands.html#the-breadbasket">Breadbasket</a></td><td>Every crop grows; emerald</td></tr>
+        <tr><td><a href="lands.html#the-rainlands">Rainlands</a></td><td>Rich iron; ancient oakwood; wheat barely grows</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="mp-box mp-full">
+    <h2 style="background:#eaecf0" id="all-articles">All articles</h2>
+    <div>
+      <p><strong>The world:</strong> <a href="caeldun-isles.html">The Caeldun Isles</a> · <a href="lands.html">Lands &amp; regions</a> · <a href="resources.html">Resources &amp; ores</a> · <a href="wildlife.html">Wildlife</a> · <a href="weather.html">Weather &amp; climate</a><br>
+      <strong>Survival:</strong> <a href="nutrition.html">Nutrition &amp; thirst</a> · <a href="farming.html">Farming &amp; crops</a> · <a href="weight.html">Weight &amp; encumbrance</a><br>
+      <strong>Building:</strong> <a href="gravity.html">Gravity &amp; building</a> · <a href="felling.html">Tree felling</a> · <a href="living-world.html">The living world</a><br>
+      <strong>Travel:</strong> <a href="open-ocean.html">The open ocean</a> · <a href="ships.html">Ships &amp; sailing</a><br>
+      <strong>Trade:</strong> <a href="economy.html">Gold &amp; shops</a> · <a href="panning.html">Panning</a><br>
+      <strong>Reference:</strong> <a href="commands.html">Commands</a> · <a href="glossary.html">Glossary</a> · <a href="roadmap.html">What's coming</a></p>
+      <p class="tagline">Articles are marked <span class="status status-live">Live</span> when the feature is running on the server, <span class="status status-partial">Partly live</span> when some of it is, and <span class="status status-planned">In development</span> when it's designed but not switched on yet. Numbers come from the server's live settings and may be tuned.</p>
+    </div>
+  </div>
 </div>
-
-<h2 id="find-your-way-around">Find your way around</h2>
-<div class="cards">
-  <a class="card" href="getting-started.html"><h3 id="getting-started">Getting started</h3><p>Your first hour: where you arrive, what you carry, what to do first.</p></a>
-  <a class="card" href="lands.html"><h3 id="lands-regions">Lands &amp; regions</h3><p>The five lands and fifteen regions of the Caeldun Isles, and what each one offers.</p></a>
-  <a class="card" href="farming.html"><h3 id="farming">Farming</h3><p>Which crops grow where, and why the Breadbasket matters so much.</p></a>
-  <a class="card" href="open-ocean.html"><h3 id="the-open-ocean">The open ocean</h3><p>Why you can't swim to the next island, and what lives out there.</p></a>
-  <a class="card" href="wildlife.html"><h3 id="wildlife">Wildlife</h3><p>Wolves, bears, red deer, whales, giant squid and the spirits of the high hills.</p></a>
-  <a class="card" href="commands.html"><h3 id="commands">Commands</h3><p>Every player command on one page.</p></a>
-</div>
-
-<div class="note"><b>Work in progress</b><p>Settlers III is still being built. Pages are marked <span class="status status-live">Live</span> when a feature is running on the server now, and <span class="status status-planned">In development</span> when it's designed but not switched on yet. Numbers come from the server's live settings and may be tuned.</p></div>
 
     </article>
     <footer class="foot">
       <p>Settlers III is a community Minecraft server. This wiki describes how the server's own plugins work; numbers come from the live configuration and can change as the world is tuned.</p>
     </footer>
   </main>
-  <aside class="toc" aria-label="On this page"></aside>
 </div>
 <script src="assets/wiki.js"></script>
+<script src="assets/maps.js"></script>
 </body>
 </html>

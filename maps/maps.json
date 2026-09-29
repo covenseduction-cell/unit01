@@ -1,0 +1,362 @@
+{
+ "width": 2622,
+ "height": 3604,
+ "blocks": [
+  32768,
+  45056
+ ],
+ "labels": [
+  {
+   "id": 1,
+   "name": "Fearnmuir",
+   "land": "outer",
+   "x": 0.3146453089244851,
+   "y": 0.20144284128745837
+  },
+  {
+   "id": 2,
+   "name": "Dunbarra",
+   "land": "outer",
+   "x": 0.18764302059496568,
+   "y": 0.5061043285238623
+  },
+  {
+   "id": 3,
+   "name": "Ardveil",
+   "land": "north",
+   "x": 0.7841342486651411,
+   "y": 0.17286348501664817
+  },
+  {
+   "id": 4,
+   "name": "Dùnross",
+   "land": "north",
+   "x": 0.6716247139588101,
+   "y": 0.2458379578246393
+  },
+  {
+   "id": 5,
+   "name": "Sgorrachan",
+   "land": "north",
+   "x": 0.858886346300534,
+   "y": 0.36570477247502775
+  },
+  {
+   "id": 6,
+   "name": "Ruannis",
+   "land": "spider",
+   "x": 0.7238749046529367,
+   "y": 0.5094339622641509
+  },
+  {
+   "id": 7,
+   "name": "Maigor",
+   "land": "spider",
+   "x": 0.7951945080091534,
+   "y": 0.5790788013318535
+  },
+  {
+   "id": 8,
+   "name": "Cannoch",
+   "land": "spider",
+   "x": 0.6308161708619374,
+   "y": 0.4697558268590455
+  },
+  {
+   "id": 9,
+   "name": "Colvane",
+   "land": "bread",
+   "x": 0.5968726163234173,
+   "y": 0.7341842397336293
+  },
+  {
+   "id": 10,
+   "name": "Tirwenn",
+   "land": "bread",
+   "x": 0.4401220442410374,
+   "y": 0.804661487236404
+  },
+  {
+   "id": 11,
+   "name": "Morvethan",
+   "land": "rain",
+   "x": 0.8577421815408085,
+   "y": 0.8365704772475028
+  },
+  {
+   "id": 12,
+   "name": "Ionfarr",
+   "land": "rain",
+   "x": 0.7684973302822273,
+   "y": 0.9214761376248612
+  },
+  {
+   "id": 13,
+   "name": "Ardnamor",
+   "land": "rain",
+   "x": 0.927536231884058,
+   "y": 0.685072142064373
+  },
+  {
+   "id": 14,
+   "name": "Ardcarran",
+   "land": "north",
+   "x": 0.9855072463768116,
+   "y": 0.22752497225305215
+  },
+  {
+   "id": 15,
+   "name": "The Burning Isle",
+   "land": "hell",
+   "x": 0.4759529658658669,
+   "y": 0.010566799108957987
+  }
+ ],
+ "lands": {
+  "outer": "#c8b489",
+  "north": "#7fb0a0",
+  "spider": "#a58fc4",
+  "bread": "#e0bd52",
+  "rain": "#6fbf63"
+ },
+ "groups": [
+  {
+   "id": "ores",
+   "label": "Ores",
+   "about": "Dots = a trace (dig anywhere there and you find a little) · solid = rich ground, stronger with more ore per chunk"
+  },
+  {
+   "id": "trees",
+   "label": "Trees",
+   "about": "Strength = trees per chunk (a full wood is about 7)"
+  },
+  {
+   "id": "crops",
+   "label": "Crops",
+   "about": "Strength = growth speed on arable ground · Enforced in some regions; elsewhere the plan"
+  },
+  {
+   "id": "minerals",
+   "label": "Cave minerals and clay",
+   "about": "The Northlands' veins in the cave walls, deep lava, and regions 3-4's clay pockets · dots = the odd vein, solid = where they gather"
+  }
+ ],
+ "layers": [
+  {
+   "id": "ore-iron",
+   "group": "ores",
+   "name": "Iron",
+   "colour": "#c79a7c",
+   "share": 100.0,
+   "peak": "up to ~877 blocks/chunk · rich on 34.5% of the land"
+  },
+  {
+   "id": "ore-diamond",
+   "group": "ores",
+   "name": "Diamond",
+   "colour": "#74d7e2",
+   "share": 20.4,
+   "peak": "up to ~81 blocks/chunk · rich on 9.7% of the land"
+  },
+  {
+   "id": "ore-coal",
+   "group": "ores",
+   "name": "Coal",
+   "colour": "#3b3b3b",
+   "share": 100.0,
+   "peak": "up to ~854 blocks/chunk · rich on 37.4% of the land"
+  },
+  {
+   "id": "ore-copper",
+   "group": "ores",
+   "name": "Copper",
+   "colour": "#d07a4a",
+   "share": 100.0,
+   "peak": "up to ~185 blocks/chunk · rich on 1.1% of the land"
+  },
+  {
+   "id": "ore-redstone",
+   "group": "ores",
+   "name": "Redstone",
+   "colour": "#c8453c",
+   "share": 20.4,
+   "peak": "up to ~105 blocks/chunk · rich on 10.3% of the land"
+  },
+  {
+   "id": "ore-gold",
+   "group": "ores",
+   "name": "Gold",
+   "colour": "#e6c24c",
+   "share": 20.4,
+   "peak": "up to ~48 blocks/chunk · rich on 0.5% of the land"
+  },
+  {
+   "id": "ore-lapis-lazuli",
+   "group": "ores",
+   "name": "Lapis lazuli",
+   "colour": "#3f5fcf",
+   "share": 5.3,
+   "peak": "up to ~56 blocks/chunk · rich on 5.3% of the land"
+  },
+  {
+   "id": "ore-emerald",
+   "group": "ores",
+   "name": "Emerald",
+   "colour": "#3cc46d",
+   "share": 5.3,
+   "peak": "up to ~59 blocks/chunk · rich on 5.3% of the land"
+  },
+  {
+   "id": "ore-quartz",
+   "group": "ores",
+   "name": "Quartz",
+   "colour": "#e8e4dc",
+   "share": 38.3,
+   "peak": "up to ~72 blocks/chunk · rich on 38.3% of the land"
+  },
+  {
+   "id": "tree-oak",
+   "group": "trees",
+   "name": "Oak",
+   "colour": "#6fae4a",
+   "share": 40.5,
+   "peak": "up to 6.5 per chunk"
+  },
+  {
+   "id": "tree-birch",
+   "group": "trees",
+   "name": "Birch",
+   "colour": "#e8e4c8",
+   "share": 25.5,
+   "peak": "up to 3.8 per chunk"
+  },
+  {
+   "id": "tree-scots-pine",
+   "group": "trees",
+   "name": "Pine",
+   "colour": "#34c6b4",
+   "share": 20.4,
+   "peak": "up to 5.6 per chunk"
+  },
+  {
+   "id": "tree-holly",
+   "group": "trees",
+   "name": "Holly",
+   "colour": "#9b3a3a",
+   "share": 8.4,
+   "peak": "up to 3.8 per chunk"
+  },
+  {
+   "id": "tree-alder",
+   "group": "trees",
+   "name": "Alder",
+   "colour": "#4a6f8f",
+   "share": 0.3,
+   "peak": "up to 3.1 per chunk"
+  },
+  {
+   "id": "tree-rowan",
+   "group": "trees",
+   "name": "Rowan",
+   "colour": "#e0703a",
+   "share": 46.7,
+   "peak": "up to 1.3 per chunk"
+  },
+  {
+   "id": "tree-palm",
+   "group": "trees",
+   "name": "Palm",
+   "colour": "#d8c24a",
+   "share": 3.2,
+   "peak": "up to 0.34 per chunk"
+  },
+  {
+   "id": "crop-wheat",
+   "group": "crops",
+   "name": "Wheat",
+   "colour": "#e6c65a",
+   "share": 31.3,
+   "peak": "normal speed"
+  },
+  {
+   "id": "crop-potato",
+   "group": "crops",
+   "name": "Potato",
+   "colour": "#b98a52",
+   "share": 53.9,
+   "peak": "normal speed"
+  },
+  {
+   "id": "crop-carrot",
+   "group": "crops",
+   "name": "Carrot",
+   "colour": "#f08a2a",
+   "share": 3.2,
+   "peak": "normal speed"
+  },
+  {
+   "id": "crop-beetroot",
+   "group": "crops",
+   "name": "Beetroot",
+   "colour": "#b8324f",
+   "share": 53.9,
+   "peak": "normal speed"
+  },
+  {
+   "id": "crop-pumpkin",
+   "group": "crops",
+   "name": "Pumpkin",
+   "colour": "#e39a2c",
+   "share": 3.2,
+   "peak": "normal speed"
+  },
+  {
+   "id": "crop-melon",
+   "group": "crops",
+   "name": "Melon",
+   "colour": "#7cc45a",
+   "share": 3.2,
+   "peak": "normal speed"
+  },
+  {
+   "id": "crop-sugar-cane",
+   "group": "crops",
+   "name": "Sugar cane",
+   "colour": "#a6e07a",
+   "share": 0.4,
+   "peak": "normal speed"
+  },
+  {
+   "id": "mineral-amethyst",
+   "group": "minerals",
+   "name": "Amethyst",
+   "colour": "#9a5cc6",
+   "share": 10.9,
+   "peak": "rich veins · rich on 6.9% of the land"
+  },
+  {
+   "id": "mineral-sulfur-and-cinnabar",
+   "group": "minerals",
+   "name": "Sulfur and cinnabar",
+   "colour": "#d8c54a",
+   "share": 13.2,
+   "peak": "rich veins · rich on 8.4% of the land"
+  },
+  {
+   "id": "mineral-lava",
+   "group": "minerals",
+   "name": "Lava",
+   "colour": "#e8602c",
+   "share": 10.1,
+   "peak": "rich veins · rich on 6.3% of the land"
+  },
+  {
+   "id": "mineral-clay",
+   "group": "minerals",
+   "name": "Clay",
+   "colour": "#a8b4c4",
+   "share": 6.2,
+   "peak": "rich veins · rich on 6.2% of the land"
+  }
+ ]
+}

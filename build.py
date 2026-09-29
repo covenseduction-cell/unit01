@@ -17,7 +17,7 @@ ROOT = Path(__file__).parent
 PAGES = ROOT / "pages"
 SITE = "Settlers III Wiki"
 
-GROUPS = ["Start here", "The World", "Survival", "Building", "Travel", "Trade", "Reference"]
+GROUPS = ["Start here", "Maps", "The World", "Survival", "Building", "Travel", "Trade", "Reference"]
 STATUS = {
     "live": ("Live", "Running on the server now."),
     "partial": ("Partly live", "Some of this is running now; the rest is still being built."),
@@ -99,11 +99,7 @@ def render(page, pages):
 <title>{html.escape(title if page["slug"] != "home" else SITE)}</title>
 <meta name="description" content="{desc}">
 <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
-<script>try{{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t}}catch(e){{}}</script>
 </head>
 <body class="page-{page["slug"]}">
 <a class="skip" href="#main">Skip to content</a>
@@ -111,14 +107,11 @@ def render(page, pages):
   <button class="menu-btn" aria-label="Open navigation" aria-expanded="false" aria-controls="sidebar">
     <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
   </button>
-  <a class="brand" href="index.html"><img src="assets/icon.svg" alt="" width="28" height="28"><span>Settlers <b>III</b></span><small>Wiki</small></a>
+  <a class="brand" href="index.html"><img src="assets/icon.svg" alt="" width="28" height="28"><span>Settlers <b>III</b> Wiki</span><small>The Caeldun Isles</small></a>
   <div class="search">
     <input id="search" type="search" placeholder="Search the wiki" autocomplete="off" aria-label="Search the wiki">
     <div id="results" class="results" role="listbox" hidden></div>
   </div>
-  <button class="theme-btn" aria-label="Switch light or dark theme" title="Light / dark">
-    <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" fill="currentColor"/></svg>
-  </button>
 </header>
 <div class="layout">
   <nav id="sidebar" class="sidebar" aria-label="Wiki pages">
@@ -133,9 +126,9 @@ def render(page, pages):
       <p>Settlers III is a community Minecraft server. This wiki describes how the server's own plugins work; numbers come from the live configuration and can change as the world is tuned.</p>
     </footer>
   </main>
-  <aside class="toc" aria-label="On this page"></aside>
 </div>
 <script src="assets/wiki.js"></script>
+<script src="assets/maps.js"></script>
 </body>
 </html>
 """

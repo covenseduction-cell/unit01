@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>World map · Settlers III Wiki</title>
+<meta name="description" content="The whole of the Caeldun Isles: every region, and what each one is known for.">
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="page-world-map">
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="menu-btn" aria-label="Open navigation" aria-expanded="false" aria-controls="sidebar">
+    <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+  </button>
+  <a class="brand" href="index.html"><img src="assets/icon.svg" alt="" width="28" height="28"><span>Settlers <b>III</b> Wiki</span><small>The Caeldun Isles</small></a>
+  <div class="search">
+    <input id="search" type="search" placeholder="Search the wiki" autocomplete="off" aria-label="Search the wiki">
+    <div id="results" class="results" role="listbox" hidden></div>
+  </div>
+</header>
+<div class="layout">
+  <nav id="sidebar" class="sidebar" aria-label="Wiki pages">
+<div class="nav-group"><div class="nav-heading">Start here</div><ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="getting-started.html">Getting started</a></li>
+<li><a href="how-it-plays.html">How Settlers plays</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-heading">Maps</div><ul>
+<li><a href="world-map.html" class="active" aria-current="page">World map</a></li>
+<li><a href="mining-map.html">Mining map</a></li>
+<li><a href="forestry-map.html">Forestry map</a></li>
+<li><a href="crops-map.html">Crops map</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-heading">The World</div><ul>
+<li><a href="caeldun-isles.html">The Caeldun Isles</a></li>
+<li><a href="lands.html">Lands &amp; regions</a></li>
+<li><a href="resources.html">Resources &amp; ores</a></li>
+<li><a href="wildlife.html">Wildlife</a></li>
+<li><a href="weather.html">Weather &amp; climate</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-heading">Survival</div><ul>
+<li><a href="nutrition.html">Nutrition &amp; thirst</a></li>
+<li><a href="farming.html">Farming &amp; crops</a></li>
+<li><a href="weight.html">Weight &amp; encumbrance</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-heading">Building</div><ul>
+<li><a href="gravity.html">Gravity &amp; building</a></li>
+<li><a href="felling.html">Tree felling</a></li>
+<li><a href="living-world.html">The living world</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-heading">Travel</div><ul>
+<li><a href="open-ocean.html">The open ocean</a></li>
+<li><a href="ships.html">Ships &amp; sailing</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-heading">Trade</div><ul>
+<li><a href="economy.html">Gold &amp; shops</a></li>
+<li><a href="panning.html">Panning</a></li>
+</ul></div>
+<div class="nav-group"><div class="nav-heading">Reference</div><ul>
+<li><a href="commands.html">Commands</a></li>
+<li><a href="glossary.html">Glossary</a></li>
+<li><a href="roadmap.html">What&#x27;s coming</a></li>
+<li><a href="inspiration.html">Inspiration &amp; credits</a></li>
+</ul></div>
+  </nav>
+  <main id="main" class="content">
+    <article>
+<header class="page-head"><div class="crumb">Maps</div><h1>World map</h1><p class="lede">The whole of the Caeldun Isles: every region, and what each one is known for.</p></header>
+<div class="map" data-map="world"></div>
+<p>The map covers the whole world, <strong>32,768 × 45,056 blocks</strong>. Drag to pan, scroll or pinch to zoom, and read the block coordinates under your cursor in the corner. Each region is labelled with the resources its land is known for; hover an icon to see its name.</p>
+
+<h2 id="reading-the-map">Reading the map</h2>
+<ul>
+  <li><strong>Colour on land</strong> is height: green lowland, tan hills, pale rock and snow on the highest summits.</li>
+  <li><strong>Pale sea</strong> near the coast is the shallow shelf, safe for swimming and small boats. <strong>Darker blue</strong> offshore is the abyss. See <a href="open-ocean.html">The open ocean</a>.</li>
+  <li><strong>Purple lines</strong> are the borders between regions.</li>
+  <li><strong>The dark red island</strong> in the far north is the Burning Isle.</li>
+</ul>
+
+<h2 id="other-maps">Other maps</h2>
+<div class="map-thumbs">
+  <a href="mining-map.html"><img src="maps/layers/ore-coal.png" alt="" style="background:#dbe9f1"><span><strong>Mining map</strong>: where every ore and mineral is found</span></a>
+  <a href="forestry-map.html"><img src="maps/layers/tree-oak.png" alt="" style="background:#dbe9f1"><span><strong>Forestry map</strong>: which trees grow where</span></a>
+  <a href="crops-map.html"><img src="maps/layers/crop-potato.png" alt="" style="background:#dbe9f1"><span><strong>Crops map</strong>: where each crop will grow</span></a>
+</div>
+
+    </article>
+    <footer class="foot">
+      <p>Settlers III is a community Minecraft server. This wiki describes how the server's own plugins work; numbers come from the live configuration and can change as the world is tuned.</p>
+    </footer>
+  </main>
+</div>
+<script src="assets/wiki.js"></script>
+<script src="assets/maps.js"></script>
+</body>
+</html>
