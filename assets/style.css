@@ -149,6 +149,14 @@ a.card:hover { text-decoration: none; border-color: var(--line); background: #ea
 .welcome { border: 1px solid var(--line-soft); background: #f8f9fa; padding: 16px 20px; margin: 0 0 14px; text-align: center; }
 .welcome h1 { border: 0; font-size: 28px; margin: 0 0 4px; }
 .welcome p { margin: 0; color: var(--muted); font-size: 14px; }
+.discord-apply {
+  display: block; margin: 0 0 14px; padding: 14px 18px; text-align: center;
+  color: #fff; background: #4f545c; border: 1px solid #36393f; border-radius: 3px;
+  box-shadow: 0 2px 5px rgba(0,0,0,.18);
+}
+.discord-apply:hover { color: #fff; background: #41454c; text-decoration: none; }
+.discord-apply strong { display: block; font-size: 18px; line-height: 1.35; }
+.discord-apply span { display: block; margin-top: 2px; color: #e3e5e8; font-size: 13px; }
 .mp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
 .mp-box { border: 1px solid var(--line-soft); background: #fff; }
 .mp-box h2 { margin: 0; padding: 4px 10px; font: 700 15px/1.5 var(--sans); border: 0; border-bottom: 1px solid var(--line-soft); }
