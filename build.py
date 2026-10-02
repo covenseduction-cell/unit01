@@ -60,6 +60,10 @@ def add_heading_ids(body):
     return re.sub(r"<h([23])([^>]*)>(.*?)</h\1>", repl, body, flags=re.S)
 
 
+LIVE_MAP = "https://play.settlers-mc.org"
+EXTERNAL = {"Maps": [("Live map \u2197", LIVE_MAP)]}
+
+
 def nav(pages, current):
     out = []
     for g in GROUPS:
@@ -70,6 +74,8 @@ def nav(pages, current):
         for p in items:
             cls = ' class="active" aria-current="page"' if p is current else ""
             out.append(f'<li><a href="{p["file"]}"{cls}>{html.escape(p["title"])}</a></li>')
+        for label, url in EXTERNAL.get(g, []):
+            out.append(f'<li><a href="{url}" target="_blank" rel="noopener">{html.escape(label)}</a></li>')
         out.append("</ul></div>")
     return "\n".join(out)
 
